@@ -5,6 +5,6 @@ title: EEPS 5534 - Topics Ideas for Paper 1
 date: 2026-09-23
 ---
 
-- anisotropy in the deep mantle, D" layer
-- low velocity zones (along the CMB)
-- anisotropic attenuation 
+- anisotropy along in the CMB, D" layer
+- ~~low velocity zones (along the CMB)~~
+- ~~anisotropic attenuation~~
