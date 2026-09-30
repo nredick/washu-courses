@@ -72,7 +72,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.15pt}
 
 % ---------------------------------------------------------------
 % Title block
@@ -98,9 +98,9 @@
 % ---------------------------------------------------------------
 \RequirePackage[
     colorlinks=true,
-    linkcolor=black,
-    citecolor=black,
-    urlcolor=black
+    linkcolor=DodgerBlue3,
+    citecolor=DodgerBlue3,
+    urlcolor=DodgerBlue3
 ]{hyperref}
 
 \renewenvironment{abstract}{%
@@ -116,14 +116,14 @@
     backend=biber,
     hyperref=true,
     backref=false,
-    style=apa,
+    style=authoryear-comp,
     maxcitenames=2,
     mincitenames=1,
     maxbibnames=99,
     sortcites=true,
     autocite=inline,
     terseinits=true,
-    abbreviate=true
+    % abbreviate=false
 ]{biblatex}
 
 \ExecuteBibliographyOptions{uniquename=false, uniquelist=false}
