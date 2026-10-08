@@ -197,7 +197,7 @@
     \begin{align*}
         \mu &= V_s^2\rho\\
         &= (\qty{4730}{\m\per\s})^2(\qty{3300}{\kg\per\m\cubed})\\
-        &= \boxed{\qty{73.83}{\giga\Pa}}
+        &= \boxed{\qty{73.38}{\giga\Pa}}
     \end{align*}
 
     \begin{align*}
@@ -218,11 +218,85 @@
 \item The bulk modulus is the ratio of the pressure to the volume change of a material. Estimate the change in the volumes and densities of the two rocks if they are buried to a depth of 40~km.
 \solution{
 
+    The definition of the bulk modulus, $\kappa$, is given as:
+
     \begin{equation}
-        \kappa = V\frac{dp}{dV}
+        \kappa = -V_0\frac{\Delta P}{\Delta V}
     \end{equation}
 
+    And because the volume, $V$, is inversely proportional to the density:
+
+    \begin{equation}
+        \kappa = -\rho_0\frac{\Delta P}{\Delta\rho}
+    \end{equation}
+
+    The lithostatic pressure, $P$, can be determined by:
+
+    \begin{equation}
+        P = \rho_r g z
+    \end{equation}
+
+    where:
+
+    \begin{itemize}
+        \item $\rho_r$ = density of overlying rock
+        \item $g$ = standard gravity
+        \item $z$ = burial depth
+    \end{itemize}
+
+    Using these relationships (and assuming conservation of mass), the resulting volume and density change for a granite and a peridotite buried to 40~km depth can be calculated as follows, assuming a crust that has an average granitic composition, $\qty{2650}{\kg\per\m\cubed}$ (given) is used for $\rho_r$.
+
+    \begin{align*}
+        \Delta P &= P - P_0\\
+        \Delta P &= (\qty{2650}{\kg\per\m\cubed})(\qty{9.81}{\m\per\s})(\qty{40000}{\m}) - (\qty{2650}{\kg\per\m\cubed})(\qty{9.81}{\m\per\s})(\qty{0}{\m})\\
+        &\approx \qty{1}{\giga\Pa}
+    \end{align*}
+
+    Relative change in volume, $\Delta P/P_0$, and in density, $\Delta\rho$, of \textbf{granite}:
+
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{align*}
+            \kappa &= -V_0 \frac{\Delta P}{\Delta V} \\
+            \frac{\Delta V}{V_0} &= -\frac{\Delta P}{\kappa} \\
+            &= \frac{-\qty{1}{\GPa}}{\qty{55.92}{\GPa}}\\
+            &\approx \boxed{-0.017 \implies -1.7\%}
+        \end{align*}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{align*}
+            \kappa &= \rho_0 \frac{\Delta P}{\Delta \rho} \\
+            \Delta \rho &= \rho_0 \frac{\Delta P}{\kappa} \\
+            % &= \rho_0 \frac{\Delta P}{\kappa} \\
+            &= \qty{2650}{\kg\per\m\cubed} \frac{\qty{1}{\GPa}}{\qty{55.92}{\GPa}}\\
+            &\approx \boxed{\qty{47.39}{\kg\per\m\cubed}}
+        \end{align*}
+    \end{minipage}
+
+    And of \textbf{peridotite}:
+
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{align*}
+            % \kappa &= -V_0 \frac{\Delta P}{\Delta V} \\
+            \frac{\Delta V}{V_0} &= -\frac{\Delta P}{\kappa} \\
+            &= \frac{-\qty{1}{\GPa}}{\qty{128.90}{\GPa}}\\
+            &\approx \boxed{-0.00776 \implies -0.776\%}
+        \end{align*}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{align*}
+            % \kappa &= \rho_0 \frac{\Delta P}{\Delta \rho} \\
+            \Delta \rho &= \rho_0 \frac{\Delta P}{\kappa} \\
+            % &= \rho_0 \frac{\Delta P}{\kappa} \\
+            &= \qty{3300}{\kg\per\m\cubed} \frac{\qty{1}{\GPa}}{\qty{128.90}{\GPa}}\\
+            &\approx \boxed{\qty{25.60}{\kg\per\m\cubed}}
+        \end{align*}
+    \end{minipage}
 }
+
 \end{enumerate}
 
 % ------------------------------------------------------------
@@ -262,13 +336,13 @@ Timescales of magmatic processes relevant to igneous rocks can be obtained by mo
 
 \begin{enumerate}[label=\textit{Part \arabic*:}, leftmargin=*]
 
-\item Using the data provided from Chakraborty (1997) \textit{J.\ Geophys.\ Res.} The file \\\texttt{problem\_set\_2\_2026.xls} contains concentration profiles from 4 experiments that used gem-quality single crystals of olivine of different compositions in a diffusion couple experiment to generate 1-D concentration gradients. The 4 experiments are carried out at different temperatures and for different durations. With this information, you can solve for the diffusion coefficient for interdiffusion of Fe and Mg. Solve for the $D$ value for the 4 different experiments, then plot this data on a $D$ vs $1/T$ plot. Do a linear regression fit to the data to determine the $D_0$ and slope which is the necessary information to make a generalized Arrhenius law that you can use to calculate diffusive timescales in olivine. For this problem, realize that the $f_{\mathrm{O}_2}$ is fixed, and you can just assume that the Mt.\ Etna olivine is at the same $f_{\mathrm{O}_2}$, so can be ignored in this problem set. Also do not worry about taking into account anisotropic effects of diffusion. I have provided a tab in excel where you can practice with the error function fitting and plotting. Please feel free to do the fits and regressions in any program such as jupyter, matlab, python, etc.
+\item Using the data provided from Chakraborty (1997) \textit{J.\ Geophys.\ Res.} The file \\\texttt{problem\_set\_2\_2026.xls} contains concentration profiles from 4 experiments that used gem-quality single crystals of olivine of different compositions in a diffusion couple experiment to generate 1-D concentration gradients. The 4 experiments are carried out at different temperatures and for different durations. With this information, you can solve for the diffusion coefficient for interdiffusion of Fe and Mg. Solve for the $D$ value for the 4 different experiments, then plot this data on a $D$ vs. $1/T$ plot. Do a linear regression fit to the data to determine the $D_0$ and slope which is the necessary information to make a generalized Arrhenius law that you can use to calculate diffusive timescales in olivine. For this problem, realize that the $f_{\mathrm{O}_2}$ is fixed, and you can just assume that the Mt.\ Etna olivine is at the same $f_{\mathrm{O}_2}$, so can be ignored in this problem set. Also do not worry about taking into account anisotropic effects of diffusion. I have provided a tab in Excel where you can practice with the error function fitting and plotting. Please feel free to do the fits and regressions in any program such as Jupyter, MATLAB, Python, etc.
 
-In order to solve for the $D$ value, you will need make a complimentary error function fit to the data using the following equation which we have gone over in class:
+In order to solve for the $D$ value, you will need to make a complimentary error function fit to the data using the following equation which we have gone over in class:
 \[
 C(x,t) = \tfrac{1}{2}\left(C_L - C_R\right)\,\mathrm{erfc}\!\left(\frac{x}{2\sqrt{Dt}}\right) + C_R
 \]
-where $C$ refers to concentration in molar units (using mol of Fo content or Fa content varying from 0--1 is fine). $C_L$ is the concentration on the left hand side, $C_R$ the right hand side of the diffusion couple. You will also need to redefine the distance axis so that `0' occurs at the midpoint of the trend. Adjust the $D$ value empirically to achieve the best fit. It would be more accurate to linearize the profile and do a least squares regression, if you want to go the extra mile, but for the sake of this homework, eyeball empirical fits are just fine! Make sure to convert all units to SI units, m, s, K. You can solve for $D_{\mathrm{Fe}}$ or $D_{\mathrm{Mg}}$, but be consistent across all 4 experiments.
+where $C$ refers to concentration in molar units (using mol of Fo content or Fa content varying from 0--1 is fine). $C_L$ is the concentration on the left-hand side, $C_R$ the right-hand side of the diffusion couple. You will also need to redefine the distance axis so that `0' occurs at the midpoint of the trend. Adjust the $D$ value empirically to achieve the best fit. It would be more accurate to linearize the profile and do a least squares regression, if you want to go the extra mile, but for the sake of this homework, eyeballed empirical fits are just fine! Make sure to convert all units to SI units, m, s, K. You can solve for $D_{\mathrm{Fe}}$ or $D_{\mathrm{Mg}}$, but be consistent across all 4 experiments.
 
 Now once you have fit all the experimental diffusion profiles, collect the data together in the `Diffusivities\_all' tab of the spreadsheet. Make an Arrhenius plot, fit the data with a least squares linear regression with the following equation style:
 \[
@@ -346,8 +420,8 @@ where $q_r$ is the reduced heat flow from deeper mantle/core sources ($\sim 15\t
 
 \end{enumerate}
 
-% \section*{Acknowledgments}
-% Some LaTeX typesetting/formatting, conversion of table for question 5 to CSV format, and code clean-up assistance provided by Google Gemini (September 2026 version).
+\section*{Acknowledgments}
+Conversion of questions from Word into LaTeX provided by Claude (October 2026 version).
 
 \singlespacing
 \printbibliography[title={References}]
