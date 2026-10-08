@@ -2,7 +2,7 @@
 \ProvidesClass{draft}
 
 % Load base class
-\LoadClass[12pt]{article}
+\LoadClass[11pt]{article}
 
 % babel for language support
 \RequirePackage[english]{babel}
@@ -111,14 +111,14 @@
 % Advanced Bibliography Cleanup for Earth Sciences
 % Comprehensive Earth Sciences Bibliography Cleanup
 \AtEveryBibitem{
-  \clearlist{address}
-  \clearlist{location}
-  \clearfield{month}      % FIXES: (10, 2024) and (30, 2006)
-  \clearfield{language}   % FIXES: The random ". en." and ". English." tags
-  \clearfield{langid}
-  \clearfield{note}
   \clearfield{day}         % <-- Add this to catch daily stamps
   \clearfield{issue}
+  \clearfield{langid}
+  \clearfield{month}      % FIXES: (10, 2024) and (30, 2006)
+  \clearfield{note}
+  \clearlist{address}
+  \clearlist{language}   % FIXES: The lang tags
+  \clearlist{location}
 
   % Fixes the URL clutter: Removes URLs ONLY for published journal articles
   % Leaves URLs active for datasets/manuals (like Bangerth's Zenodo & Faccenda's Github)
@@ -129,6 +129,33 @@
     \clearfield{urlmonth}
     \clearfield{eprint}
     \clearfield{issn}     % Optional: Removes ISSN numbers to save space
+  }{}
+
+  \ifentrytype{incollection}{
+    \clearfield{url}
+    \clearfield{urldate}
+    \clearfield{urlyear}
+    \clearfield{urlmonth}
+    \clearfield{eprint}
+    % \clearfield{issn}     % Optional: Removes ISSN numbers to save space
+  }{}
+
+    \ifentrytype{book}{
+    \clearfield{url}
+    \clearfield{urldate}
+    \clearfield{urlyear}
+    \clearfield{urlmonth}
+    \clearfield{eprint}
+    % \clearfield{issn}     % Optional: Removes ISSN numbers to save space
+  }{}
+
+    \ifentrytype{inbook}{
+    \clearfield{url}
+    \clearfield{urldate}
+    \clearfield{urlyear}
+    \clearfield{urlmonth}
+    \clearfield{eprint}
+    % \clearfield{issn}     % Optional: Removes ISSN numbers to save space
   }{}
 }
 

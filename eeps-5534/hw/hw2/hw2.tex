@@ -79,22 +79,22 @@
 % ------------------------------------------------------------
 % QUESTION 1
 % ------------------------------------------------------------
-\item Shear wave splitting observations of seismic anisotropy from vertically propagating SKS waves commonly report a splitting time (time difference between the fast and slow S wave) on the order of 1 second. Discuss the interpretation of such observations, making reasonable estimates for the seismic velocities and anisotropy \dots
+\item Shear wave splitting observations of seismic anisotropy from vertically propagating SKS waves commonly report a splitting time (time difference between the fast and slow S wave) on the order of 1 second. Discuss the interpretation of such observations, making reasonable estimates for the seismic velocities and anisotropy.
 
 \begin{enumerate}[label=\Alph*)]
 \item Crustal rocks are assumed to show anisotropy on the order of 1\%. Make a simple calculation showing why the observed splitting cannot be caused by crustal rocks.
 \solution{
-% wip ADD YOUR ANSWER HERE
-    Given that the average composition of continental crust is granitic, we can assume a shear wave velocity of the crust of 3.67 km/s (given by question 2). Using the following equation for delay time, as defined by \textcite{silverSeismicAnisotropyContinents1996,silverShearWaveSplitting1991}:
+    Given that the average composition of continental crust is granitic, we can assume a shear wave velocity of the crust of 3.67 km/s (given by question 2). Using the following equation for delay time, as defined by \textcite{silverShearWaveSplitting1991,silverSeismicAnisotropyContinents1996}:
 
     \begin{equation}
         \delta t = L \frac{\delta\hat{\beta}}{\beta_0}
+        \label{eq:delay-time}
     \end{equation}
 
     Where:
 
     \begin{itemize}
-        \item $L$ = path length through the crust
+        \item $L$ = path length (through the crust)
         \item $\delta\hat{\beta}$ = dimensionless anisotropy
         \item $\beta_0$ = isotropically averaged shear velocity
     \end{itemize}
@@ -103,22 +103,42 @@
 
     \begin{align*}
         \delta t &= \qty{40}{\km} \frac{0.01}{\qty{3.67}{\km\per\s}}\\
-        &= \qty{0.1}{\s} \ll\, \qty{1}{\s}
+        &\approx \qty{0.1}{\s} \ll\, \qty{1}{\s}
     \end{align*}
 
     Even for exceptionally thick regions of the crust estimated at \textasciitilde70~km \parencite{mooneyCrustLithosphericStructure2015}, the expected delay time is only:
 
     \begin{align*}
         \delta t &= \qty{70}{\km} \frac{0.01}{\qty{3.67}{\km\per\s}}\\
-        &= \qty{0.2}{\s} \ll\, \qty{1}{\s}
+        &\approx \qty{0.2}{\s} \ll\, \qty{1}{\s}
     \end{align*}
 
-    This is consistent with delay time estimates of 0.1--0.2~s by \textcite{savageSeismicAnisotropyMantle1999,silverSeismicAnisotropyContinents1996}. Even for the thickest regions of the crust, the expected anisotropy only accounts for a small fraction of the observed anisotropy, therefore, the observed splitting cannot be caused by only crustal rocks. 
+    This is consistent with delay time estimates of 0.1--0.2~s for the crust provided by \textcite{savageSeismicAnisotropyMantle1999,silverSeismicAnisotropyContinents1996}. Even for the thickest regions of the crust, the expected anisotropy only accounts for a small fraction of the observed anisotropy, therefore, the observed splitting cannot be caused by only crustal rocks.
 }
 
-\item Now calculate and make a graph showing the trade-off between the inferred thickness of the upper mantle anisotropic layer and the estimated percent anisotropy of the mantle rocks, assuming a single anisotropic layer. How might one be able to constrain this trade off?
+\item Now calculate and make a graph showing the trade-off between the inferred thickness of the upper mantle anisotropic layer and the estimated percent anisotropy of the mantle rocks, assuming a single anisotropic layer. How might one be able to constrain this trade-off?
 \solution{
-% todo ADD YOUR ANSWER HERE
+    By rearranging Equation~\ref{eq:delay-time} for thickness, $L$:
+
+    \begin{equation}
+        L = \delta t \frac{\beta_0}{\delta\hat{\beta}}
+    \end{equation}
+
+    and given $\delta t = \qty{1}{\s}$, and assuming that the single anisotropic layer of the mantle in the question has a peridotitic composition $\implies \beta_0 = \qty{4.73}{\km\per\s}$ (given by question 2):
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{fig1b.png}
+        \caption{Assuming a single anisotropic layer and an observed delay time of 1~s, the inferred thickness for a given percent anisotropy of the anisotropic layer is given by the blue curve.}
+        \label{fig:fig1b.png}
+    \end{figure}
+
+    Additional constraints for this trade-off may be provided by both:
+
+    \begin{itemize}
+        \item Laboratory experiments \parencite{nicolasMechanismsFlowNaturally1973,zhangLatticePreferredOrientation1995} that can determine the observed anisotropy in upper mantle minerals.
+        \item Models of the upper mantle that can constrain the depth range where the pressure, temperature, and other local conditions \parencite[e.g., water content;][]{skemerInfluenceWaterLPO2013} support a deformation regime (dislocation creep) under which strain-induced LPO can result in seismic anisotropy \parencite{hansenReviewMechanismsGenerating2021}.
+    \end{itemize}
 
 }
 \end{enumerate}
@@ -131,13 +151,76 @@
 \begin{enumerate}[label=\Alph*)]
 \item Find the Lam\'e parameters ($\lambda$ and $\mu$) and bulk modulus. Be sure to give the correct units. Are these rocks well approximated as Poisson solids?
 \solution{
-% todo ADD YOUR ANSWER HERE
+    Using the equations for P- and S-wave velocities given during lecture:
+    \begin{equation}
+        V_p = \sqrt{\frac{\kappa + \frac{4}{3}\mu}{\rho}} = \sqrt{\frac{\lambda + 2\mu}{\rho}}
+    \end{equation}
 
+    \begin{equation}
+        V_s = \sqrt{\frac{\mu}{\rho}}
+    \end{equation}
+
+    where:
+    \begin{itemize}
+        \item $\kappa$ = bulk modulus
+        \item $\rho$ = density
+    \end{itemize}
+
+    The Lam\'e parameters ($\lambda$ and $\mu$) and bulk modulus for \textbf{granite} can be determined by solving first for $\mu$:
+
+    \begin{align*}
+        \mu &= V_s^2\rho\\
+        &= (\qty{3670}{\m\per\s})^2(\qty{2650}{\kg\per\m\cubed})\\
+        &= \boxed{\qty{35.69}{\giga\Pa}}
+    \end{align*}
+
+    Which can then be used to calculate $\lambda$:
+
+    \begin{align*}
+        \lambda &= \rho V_p^2 - 2\mu\\
+        &= (\qty{2650}{\kg\per\m\cubed})(\qty{6250}{\m\per\s})^2 - 2(\qty{35.69}{\giga\Pa})\\
+        &= \boxed{\qty{32.13}{\giga\Pa}}
+    \end{align*}
+
+    And to determine the bulk modulus, $\kappa$:
+
+    \begin{align*}
+        \kappa &= \rho V_p^2 - \frac{4}{3}\mu\\
+        &= (\qty{2650}{\kg\per\m\cubed})(\qty{6250}{\m\per\s})^2 - \frac{4}{3}(\qty{35.69}{\giga\Pa})\\
+        &= \boxed{\qty{55.92}{\giga\Pa}}
+    \end{align*}
+
+    \newpage
+
+    The parameters for \textbf{peridotite} can be determined the same way:
+
+    \begin{align*}
+        \mu &= V_s^2\rho\\
+        &= (\qty{4730}{\m\per\s})^2(\qty{3300}{\kg\per\m\cubed})\\
+        &= \boxed{\qty{73.83}{\giga\Pa}}
+    \end{align*}
+
+    \begin{align*}
+        \lambda &= \rho V_p^2 - 2\mu\\
+        &= (\qty{3300}{\kg\per\m\cubed})(\qty{8300}{\m\per\s})^2 - 2(\qty{73.83}{\giga\Pa})\\
+        &= \boxed{\qty{79.68}{\giga\Pa}}
+    \end{align*}
+
+    \begin{align*}
+        \kappa &= \rho V_p^2 - \frac{4}{3}\mu\\
+        &= (\qty{3300}{\kg\per\m\cubed})(\qty{8300}{\m\per\s})^2 - \frac{4}{3}(\qty{73.83}{\giga\Pa})\\
+        &= \boxed{\qty{128.90}{\giga\Pa}}
+    \end{align*}
+
+    A Poisson solid is a material with $\lambda = \mu$ and $\sigma = \frac{\lambda}{2(\lambda+\mu)} = 0.25$ \parencite{steinIntroductionSeismologyEarthquakes2003,shearerIntroductionSeismology2019}. For granite, $\sigma\approx0.2369$; for peridotite, $\sigma\approx0.2595$. Given that $\mu$ and $\lambda$ are close in value for both granite and peridotite, respectively, and that the $\sigma$ values are close to 0.25, both of these materials can be well-approximated as Poisson solids.
 }
 
-\item The bulk modulus is the ratio of the pressure to the volume change of a material. Estimate the change in the volumes and densities of the two rocks if they are buried to a depth of 40 km.
+\item The bulk modulus is the ratio of the pressure to the volume change of a material. Estimate the change in the volumes and densities of the two rocks if they are buried to a depth of 40~km.
 \solution{
-% todo ADD YOUR ANSWER HERE
+
+    \begin{equation}
+        \kappa = V\frac{dp}{dV}
+    \end{equation}
 
 }
 \end{enumerate}
@@ -145,7 +228,7 @@
 % ------------------------------------------------------------
 % QUESTION 3
 % ------------------------------------------------------------
-\item Near the earth's surface, the soil is generally in equilibrium with the mean annual temperature (except within a couple meters of the surface, where there are seasonal and diurnal variations). Recent evidence suggests that some climatic changes are extremely rapid. Assume that during the last deglaciation in Scotland, the mean annual temperature in Scotland suddenly changed from 0 to 10~$^\circ$C (for the sake of this problem you can approximate the change as instantaneous, and ignore geothermal heat flux). Calculate temperature as a function of time using the formula given in class and plot for the last 15,000 years at depths of 50~m, 200~m and 1~km. Assume that the conductivity of the soil is 1.5~W/m and the heat capacity is 700~J/(kg-K). Comment on the usefulness of soil temperature profiles for reconstructing the climate record.
+\item Near the earth's surface, the soil is generally in equilibrium with the mean annual temperature (except within a couple meters of the surface, where there are seasonal and diurnal variations). Recent evidence suggests that some climatic changes are extremely rapid. Assume that during the last deglaciation in Scotland, the mean annual temperature in Scotland suddenly changed from 0 to 10\textdegree C (for the sake of this problem you can approximate the change as instantaneous, and ignore geothermal heat flux). Calculate temperature as a function of time using the formula given in class and plot for the last 15,000 years at depths of 50~m, 200~m and 1~km. Assume that the conductivity of the soil is 1.5~W/m and the heat capacity is 700~J/(kg-K). Comment on the usefulness of soil temperature profiles for reconstructing the climate record.
 \solution{
 % todo ADD YOUR ANSWER HERE
 
