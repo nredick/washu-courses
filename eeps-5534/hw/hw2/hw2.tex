@@ -382,7 +382,7 @@ Comment on the usefulness of soil temperature profiles for reconstructing the cl
 
 \item Using the temperature derivative of seismic velocity and the temperature you calculated in part A), calculate the seismic velocity anomaly expected at 250~km depth for a cooling time of 2.5~Ga. Assume that the temperature of the surrounding mantle does not change. Can the ``roots'' be due to cooling?
 \solution{
-% wip ADD YOUR ANSWER HERE
+% todo 4b
 
 
 }
@@ -397,7 +397,9 @@ Timescales of magmatic processes relevant to igneous rocks can be obtained by mo
 
 \begin{enumerate}[label=\textit{Part \arabic*:}, leftmargin=*]
 
-\item Using the data provided from Chakraborty (1997) \textit{J.\ Geophys.\ Res.} The file \\\texttt{problem\_set\_2\_2026.xls} contains concentration profiles from 4 experiments that used gem-quality single crystals of olivine of different compositions in a diffusion couple experiment to generate 1-D concentration gradients. The 4 experiments are carried out at different temperatures and for different durations. With this information, you can solve for the diffusion coefficient for interdiffusion of Fe and Mg. Solve for the $D$ value for the 4 different experiments, then plot this data on a $D$ vs. $1/T$ plot. Do a linear regression fit to the data to determine the $D_0$ and slope which is the necessary information to make a generalized Arrhenius law that you can use to calculate diffusive timescales in olivine. For this problem, realize that the $f_{\mathrm{O}_2}$ is fixed, and you can just assume that the Mt.\ Etna olivine is at the same $f_{\mathrm{O}_2}$, so can be ignored in this problem set. Also do not worry about taking into account anisotropic effects of diffusion. I have provided a tab in Excel where you can practice with the error function fitting and plotting. Please feel free to do the fits and regressions in any program such as Jupyter, MATLAB, Python, etc.
+\item Using the data provided from Chakraborty (1997) \textit{J.\ Geophys.\ Res.} The file \\\texttt{problem\_set\_2\_2026.xls} contains concentration profiles from 4 experiments that used gem-quality single crystals of olivine of different compositions in a diffusion couple experiment to generate 1-D concentration gradients. The 4 experiments are carried out at different temperatures and for different durations. With this information, you can solve for the diffusion coefficient for interdiffusion of Fe and Mg. Solve for the $D$ value for the 4 different experiments, then plot this data on a $D$ vs. $1/T$ plot. Do a linear regression fit to the data to determine the $D_0$ and slope which is the necessary information to make a generalized Arrhenius law that you can use to calculate diffusive timescales in olivine. For this problem, realize that the $f_{\mathrm{O}_2}$ is fixed, and you can just assume that the Mt.\ Etna olivine is at the same $f_{\mathrm{O}_2}$, so can be ignored in this problem set.
+
+Also, do not worry about taking into account anisotropic effects of diffusion. I have provided a tab in Excel where you can practice with the error function fitting and plotting. Please feel free to do the fits and regressions in any program such as Jupyter, MATLAB, Python, etc.
 
 In order to solve for the $D$ value, you will need to make a complimentary error function fit to the data using the following equation which we have gone over in class:
 \[
@@ -411,8 +413,26 @@ D = D_0 \exp\!\left(-\frac{Q}{RT}\right)
 \]
 where $D_0$ is the pre-exponential constant (diffusivity at infinite $T$), and $R$ is the gas constant and $Q$ is the activation energy. You can do a simple least squares fit here, but a more accurate way would be to take into account uncertainty on the points (obtained from your fits if you did a linearized fitting to the experiments) and then do a weighted least squares regression. But this is not necessary for this problem set.
 \solution{
-% todo ADD YOUR ANSWER HERE
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{fig51a.png}
+        % \caption{CAPTION}
+        \label{fig:fig51a}
+    \end{figure}
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{fig51b.png}
+        % \caption{CAPTION}
+        \label{fig:fig51b}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{q5a-results}
+        % \caption{CAPTION}
+        \label{fig:q5a-results}
+    \end{figure}
 }
 
 \item \textit{Mt.\ Etna:} On the `natural olivine' tab you have electron microprobe data of a concentration profile in an olivine from Mt.\ Etna. The dominant feature of this olivine is that it is reversely zoned. You interpret this inverse zoning as indicating a discreet magma mixing event with a more mafic magma, inducing a thick rim of Mg-rich olivine to grow. Initially this is a sharp boundary, but is relaxed by chemical diffusion.
@@ -420,8 +440,17 @@ where $D_0$ is the pre-exponential constant (diffusivity at infinite $T$), and $
 Using the diffusion parameters from \textit{Part 1}, make a best fit for the Etna data. The temperature for this eruption was independently determined to be 1150~$^\circ$C. Determine a timescale of mixing (time from the mixing event when the diffusive clock started to eruption when the diffusion clock effectively stops). You can ignore $f_{\mathrm{O}_2}$, pressure, and crystallographic effects for this calculation.
 
 Note the thin, normally-zoned rim at the very edge of the profile. What process(es) could this be related to?
+
 \solution{
-% todo ADD YOUR ANSWER HERE
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{fig52.png}
+        % \caption{CAPTION}
+        \label{fig:fig52}
+    \end{figure}
+
+    The thin, normally-zoned rim at the edge of the profile may be related to rapid cooling around the outermost edge of crystal, equilibrium processes with the surrounding magma, or possibly rapid changes in the rim composition during ascent.
 
 }
 
@@ -595,7 +624,7 @@ where $q_r$ is the reduced heat flow from deeper mantle/core sources ($\sim 15\t
 \end{enumerate}
 
 \section*{Acknowledgments}
-Conversion of questions from Word into LaTeX provided by Claude (October 2026 version).
+Conversion of questions from Word into LaTeX provided by Claude (October 2026 version). Plots produced in Python, with some formatting assistance from Google Gemini (v. Oct. 2026).
 
 \singlespacing
 \printbibliography[title={References}]
