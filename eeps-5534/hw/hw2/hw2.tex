@@ -382,9 +382,42 @@ Comment on the usefulness of soil temperature profiles for reconstructing the cl
 
 \item Using the temperature derivative of seismic velocity and the temperature you calculated in part A), calculate the seismic velocity anomaly expected at 250~km depth for a cooling time of 2.5~Ga. Assume that the temperature of the surrounding mantle does not change. Can the ``roots'' be due to cooling?
 \solution{
-% todo 4b
+% wip 4b
 
+    Using $T(\qty{250}{\km}, \qty{2.5}{Ga}) \approx \qty{671}{\celsius}$ as calculated in the previous problem, the seismic velocity anomalies ($\frac{dV_P}{V_P}, \frac{dV_S}{V_S},$) can be calculated using the temperature derivatives of the seismic velocities provided during lecture (slide 15, \texttt{seismic\_methods\_26.pptx}):
 
+    $$ \frac{dV_P}{dT} = \qty{0.6}{m\per\s\per\kelvin}$$
+    $$ \frac{dV_S}{dT} = \qty{0.45}{m\per\s\per\kelvin}$$
+
+    The change in temperature ($dT$) between the root ($T_r$) and the mantle ($T_m$):
+
+    $$dT = T_m - T_r = \operatorname{abs}(671 - 1300) = \qty{629}{\celsius}$$
+
+    \begin{align*}
+        dV_P &= dT \cdot \frac{dV_P}{dT}\\
+        &= \qty{629}{\celsius} \cdot \qty{0.6}{m\per\s\per\kelvin}\\
+        &\approx \qty{377}{\m\per\s}
+    \end{align*}
+
+    \begin{align*}
+        dV_S &= dT \cdot \frac{dV_S}{dT}\\
+        &= \qty{629}{\celsius} \cdot \qty{0.45}{m\per\s\per\kelvin}\\
+        &\approx \qty{283}{\m\per\s}
+    \end{align*}
+
+    Using the seismic velocities provided for peridotite in question 2:
+
+    \begin{align*}
+        \frac{dV_P}{V_P} &= \qty{377}{\m\per\s} / \qty{8300}{\m\per\s} \cdot 100\\
+        &= 4.55\%
+    \end{align*}
+
+    \begin{align*}
+        \frac{dV_S}{V_S} &= \qty{283}{\m\per\s} / \qty{4730}{\m\per\s} \cdot 100\\
+        &= 5.98\%
+    \end{align*}
+
+    Given that these values are at the very low end of the observed velocity anomaly range for cratonic roots, it is unlikely that they can be solely attributed to cooling.
 }
 \end{enumerate}
 
@@ -628,6 +661,8 @@ Conversion of questions from Word into LaTeX provided by Claude (October 2026 ve
 
 \singlespacing
 \printbibliography[title={References}]
+
+\includepdf[pages=-]{"hw2-code.pdf"}
 
 % \newpage
 
