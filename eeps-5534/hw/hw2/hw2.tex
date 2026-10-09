@@ -465,7 +465,7 @@ where $q_r$ is the reduced heat flow from deeper mantle/core sources ($\sim 15\t
 \begin{enumerate}[label=\alph*)]
 \item Assuming an upper crustal thickness of 10~km, and using the provided abundances of heat-producing elements in the upper crust, what is the surface heat flow ($q_s$) from the upper crust and mantle/core sources, and how does this compare to the total average value of 53~mW/m$^2$?
 \solution{
-    
+
     Convert $C_{\text{K}} = 2.5$~wt\% to mass fraction:
 
     $$ C_{\text{K}} / 100 = 0.025 $$
@@ -513,10 +513,78 @@ where $q_r$ is the reduced heat flow from deeper mantle/core sources ($\sim 15\t
 
 }
 
-\item Assuming the average stable continental crust has a thickness of 30~km, the total surface heat flow is 53~mW/m$^2$, and the density of the lower crust is 2900~kg/m$^3$, what is the concentration of U, Th, and K in the lower crust? (Assume the K/U and Th/U are the same for upper and lower continental crust.) How does this compare with the concentration in the upper crust? How does it compare to the average n-MORB (see Table 3 in Gale et al.\ 2013, \textit{G$^3$})?
-\solution{
-% todo ADD YOUR ANSWER HERE
+\item Assuming the average stable continental crust has a thickness of 30~km, the total surface heat flow is 53~mW/m$^2$, and the density of the lower crust is 2900~kg/m$^3$, \textbf{what is the concentration of U, Th, and K in the lower crust}? (Assume the K/U and Th/U are the same for upper and lower continental crust.) How does this compare with the concentration in the upper crust? How does it compare to the average n-MORB (see Table 3 in Gale et al.\ 2013, \textit{G$^3$})?
 
+% ! N-MORB the most likely basalt composition encountered along the ridge >500 km from hot spots
+
+\solution{
+% wip ADD YOUR ANSWER HERE
+
+    UC = upper crust; LC = lower crust.
+
+    \begin{itemize}
+        \item $D_{\text{tot}} = \qty{30000}{\m}$; $D_{UC} = \qty{10000}{\m} \implies D_{LC} = \qty{20000}{\m}$
+        \item $q_s = \qty{53}{\milli\watt\per\meter\squared}$
+        \item $q_r = \qty{15}{\milli\watt\per\meter\squared}$
+        \item $\rho_{LC} = \qty{2900}{\kg\per\meter\cubed}$
+        \item $\rho_{UC} = \qty{2700}{\kg\per\meter\cubed}$
+    \end{itemize}
+
+    \begin{align*}
+    q_s &= q_r + q_{UC} + q_{LC} \\
+    q_{LC} &= q_s - q_r - q_{UC} \\
+    q_{UC} &= D_{UC} \times A_{UC} = \qty{10000}{\m} \cdot (\num{1.69E-6}) \\
+    &= \num{0.01694} = \qty{16.94}{\milli\watt\per\meter\squared} \\
+    q_{LC} &= 53 - 15 - 17 = \qty{21}{\milli\watt\per\meter\squared} \\
+    q_{LC} &= D_{LC} \times A_{LC} \\
+    A_{LC} &= \frac{q_{LC}}{D_{LC}} \\
+    &= \frac{\qty{21E-3}{\watt\per\meter\squared}}{\qty{20000}{\m}} \\
+    &= \qty{1.05E-6}{\watt\per\meter\cubed}
+    \end{align*}
+
+    % \noindent\rule{\textwidth}{0.4pt}
+
+    Assuming constant elemental ratios across upper \& lower crust:
+    \begin{align*}
+    \text{K}/\text{U} &= \frac{0.025}{\num{2.8E-6}} = 8928.57 \\
+    \text{Th}/\text{U} &= \frac{\num{1.07E-5}}{\num{2.8E-6}} = 3.82
+    \end{align*}
+
+    Compute the concentrations:
+    \begin{align*}
+        A_{LC} &= \rho_{LC} \times H_{\text{tot}} \\
+        H_{\text{tot}} &= \text{total radiogenic heat production} \\
+        H_{\text{tot}} &= \left[ H_{\text{U}} \left(C_{\text{U}, LC}\right) + H_{\text{Th}} \left(C_{\text{Th}, LC}\right) + H_{\text{K}} \left(C_{\text{K}, LC}\right) \right] \\
+        H_{\text{tot}} &= C_{\text{U}, LC} \left[ H_{\text{U}} + H_{\text{Th}} \left(\frac{\text{Th}}{\text{U}}\right) + H_{\text{K}} \left(\frac{\text{K}}{\text{U}}\right) \right] \\
+        A_{LC} &= \rho_{LC} \cdot C_{\text{U}, LC} \left[ H_{\text{U}} + H_{\text{Th}} \left(\frac{\text{Th}}{\text{U}}\right) + H_{\text{K}} \left(\frac{\text{K}}{\text{U}}\right) \right] \\
+        C_{\text{U}, LC} &= \frac{A_{LC}}{\rho_{LC} \left[ H_{\text{U}} + H_{\text{Th}} \left(\frac{\text{Th}}{\text{U}}\right) + H_{\text{K}} \left(\frac{\text{K}}{\text{U}}\right) \right]} \\
+        % &= \frac{A_{LC}}{\rho_{LC} \cdot \Sigma H} \\[1.5ex]
+        &= \frac{\qty{1.05E-6}{\watt\per\meter\cubed}}{
+            \left(\qty{2900}{\kg\per\meter\cubed}\right)
+            \left[ \begin{array}{l}
+            \qty{9.52E-5}{\watt\per\kg} + \qty{2.56E-5}{\watt\per\kg}(3.82) \\
+            + \qty{3.48E-9}{\watt\per\kg}(8928.57)
+            \end{array} \right]
+        }\\
+        &= \qty{1.62}{\mu g/g}
+    \end{align*}
+
+    Calculate lower crust concentrations for Th and K:
+    \begin{align*}
+        C_{\text{Th}, LC} &= 3.82 \cdot \num{1.62} = \qty{6.19}{\mu g/g}\\
+        C_{\text{K}, LC} &= 8928.57 \cdot \num{1.62} = \qty{14464.28}{\mu g/g}
+    \end{align*}
+
+    Comparison of upper crust, lower crust, and n-MORB concentrations (below in wt \%) $\implies \text{UC} > \text{LC} > \text{n-MORB}$.
+    \begin{table}[H]
+        \begin{tabular}{c | c c c}
+            & UC & LC & n-MORB \parencite{galeMeanCompositionOcean2013} \\
+            \hline
+            $C_{\text{U}}$ & 0.00028 & 0.000162 & 0.0000083 \\
+            $C_{\text{Th}}$ & 0.00107 & 0.000619 & 0.0000252 \\
+            $C_{\text{K}}$ & 2.5 & 1.446928 & 0.116214
+        \end{tabular}
+    \end{table}
 }
 
 \item If the continental crust holds a massive share of the planet's incompatible elements despite accounting for $<$\,1\% of BSE mass, what does this imply about the depletion state of the upper mantle where MORBs (Mid-Ocean Ridge Basalts) are generated?
