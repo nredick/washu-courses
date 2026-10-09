@@ -1,4 +1,4 @@
-\documentclass{template}
+    \documentclass{template}
 
 % --- PACKAGES ---
 % \usepackage[margin=1in, headheight=14pt, top=1.2in]{geometry}
@@ -130,7 +130,7 @@
         \centering
         \includegraphics[width=0.75\textwidth]{fig1b.png}
         \caption{Assuming a single anisotropic layer and an observed delay time of 1~s, the inferred thickness for a given percent anisotropy of the anisotropic layer is given by the blue curve.}
-        \label{fig:fig1b.png}
+        \label{fig:fig1b}
     \end{figure}
 
     Additional constraints for this trade-off may be provided by both:
@@ -217,7 +217,6 @@
 
 \item The bulk modulus is the ratio of the pressure to the volume change of a material. Estimate the change in the volumes and densities of the two rocks if they are buried to a depth of 40~km.
 \solution{
-
     The definition of the bulk modulus, $\kappa$, is given as:
 
     \begin{equation}
@@ -302,9 +301,39 @@
 % ------------------------------------------------------------
 % QUESTION 3
 % ------------------------------------------------------------
-\item Near the earth's surface, the soil is generally in equilibrium with the mean annual temperature (except within a couple meters of the surface, where there are seasonal and diurnal variations). Recent evidence suggests that some climatic changes are extremely rapid. Assume that during the last deglaciation in Scotland, the mean annual temperature in Scotland suddenly changed from 0 to 10\textdegree C (for the sake of this problem you can approximate the change as instantaneous, and ignore geothermal heat flux). Calculate temperature as a function of time using the formula given in class and plot for the last 15,000 years at depths of 50~m, 200~m and 1~km. Assume that the conductivity of the soil is 1.5~W/m and the heat capacity is 700~J/(kg-K). Comment on the usefulness of soil temperature profiles for reconstructing the climate record.
+\item Near the earth's surface, the soil is generally in equilibrium with the mean annual temperature (except within a couple meters of the surface, where there are seasonal and diurnal variations). Recent evidence suggests that some climatic changes are extremely rapid. Assume that during the last deglaciation in Scotland, the mean annual temperature in Scotland suddenly changed from 0 to 10\textdegree C (for the sake of this problem you can approximate the change as instantaneous, and ignore geothermal heat flux). Calculate temperature as a function of time using the formula given in class and plot for the last 15,000 years at depths of 50~m, 200~m and 1~km. Assume that the conductivity of the soil is 1.5~W/m and the heat capacity is 700~J/(kg-K).
+
+Comment on the usefulness of soil temperature profiles for reconstructing the climate record.
 \solution{
-% todo ADD YOUR ANSWER HERE
+
+    Using the equation discussed in lecture:
+
+    \begin{equation}
+        T(z, t) = \Delta T \operatorname{erfc}\left(\frac{z}{2\sqrt{\kappa t}}\right) + T_0
+    \end{equation}
+
+    where:
+
+    \begin{itemize}
+        \item $T_0 = 0\degree$C; initial temperature
+        \item $\Delta T = (T_f - T_0) = -10\degree$C; change in temperature
+        \item $z$ = 50~m, 200~m and 1~km; depth
+        \item $\kappa = \frac{k}{\rho C_p}$; thermal diffusivity
+        \begin{itemize}
+            \item $k$ = 1.5~W/m; thermal conductivity
+            \item $\rho$ = 2650 (kg/m$^3$); density (taken from previous questions)
+            \item $C_p$ = 700~J/(kg-K); heat capacity
+        \end{itemize}
+    \end{itemize}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{fig3.png}
+        % \caption{Assuming a single anisotropic layer and an observed delay time of 1~s, the inferred thickness for a given percent anisotropy of the anisotropic layer is given by the blue curve.}
+        \label{fig:fig3}
+    \end{figure}
+
+    Soil temperature profiles can be used to reconstruct the climate record by inverting for past perturbations. Large perturbations should be reflected in the modern profile.
 
 }
 
@@ -314,15 +343,46 @@
 \item Continental cratons have deep, high seismic velocity lithospheric ``roots'' with velocity anomalies of 5--8\% relative to the surrounding mantle. Now test the idea that these ``roots'' are due to the cooling of the mantle lithosphere. The roots are observed down to depths of about 250~km for old cratons (age $\sim$2.5~Ga).
 
 \begin{enumerate}[label=\Alph*)]
-\item Calculate and plot the temperature at 250~km depth for the halfspace cooling model as a function of time.
+\item Calculate and plot the temperature at 250~km depth for the half-space cooling model as a function of time.
 \solution{
-% todo ADD YOUR ANSWER HERE
+    Using the half-space cooling model discussed in lecture:
+
+    \begin{equation}
+        T(z, t) = T_s + (T_m - T_s) \operatorname{erf}\left(\frac{z}{2\sqrt{\kappa t}}\right)
+    \end{equation}
+
+    where:
+    \begin{itemize}
+        \item $z$ = depth
+        \item $t$ = cooling time
+        \item $T_s$ = surface temperature (0\textdegree C)
+        \item $T_m$ = mantle temperature \parencite[1300\textdegree C;][]{richardsReassessingThermalStructure2018}
+        \item $\kappa = \frac{k}{\rho C_p}$; thermal diffusivity (values taken from previous question)
+        \begin{itemize}
+            \item $k$ = 1.5~W/m; thermal conductivity
+            \item $\rho$ = 2650 (kg/m$^3$); density (taken from previous questions)
+            \item $C_p$ = 700~J/(kg-K); heat capacity
+        \end{itemize}
+    \end{itemize}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{fig4a.png}
+        % \caption{Assuming a single anisotropic layer and an observed delay time of 1~s, the inferred thickness for a given percent anisotropy of the anisotropic layer is given by the blue curve.}
+        \label{fig:fig4a}
+    \end{figure}
+
+    \begin{align*}
+        T(z, t) &= T_s + (T_m - T_s) \operatorname{erf}\left(\frac{z}{2\sqrt{\frac{k}{\rho C_p} t}}\right)\\
+        T(\qty{250}{\km}, \qty{2.5}{Ga}) &= \qty{1573.15}{\kelvin} \cdot \operatorname{erf}\left(\frac{\qty{250}{\km}}{2\sqrt{\frac{\qty{1.5}{\W\per\m}}{(\qty{2650}{\kg\per\m\s\squared})\cdot(\qty{700}{\joule\per\kilogram\per\kelvin})} \cdot\qty{2.5}{Ga}}}\right)\\
+        &= \qty{670.80}{\celsius}
+    \end{align*}
 
 }
 
 \item Using the temperature derivative of seismic velocity and the temperature you calculated in part A), calculate the seismic velocity anomaly expected at 250~km depth for a cooling time of 2.5~Ga. Assume that the temperature of the surrounding mantle does not change. Can the ``roots'' be due to cooling?
 \solution{
-% todo ADD YOUR ANSWER HERE
+% wip ADD YOUR ANSWER HERE
 
 }
 \end{enumerate}
