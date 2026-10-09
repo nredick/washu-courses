@@ -375,7 +375,7 @@ Comment on the usefulness of soil temperature profiles for reconstructing the cl
     \begin{align*}
         T(z, t) &= T_s + (T_m - T_s) \operatorname{erf}\left(\frac{z}{2\sqrt{\frac{k}{\rho C_p} t}}\right)\\
         T(\qty{250}{\km}, \qty{2.5}{Ga}) &= \qty{1573.15}{\kelvin} \cdot \operatorname{erf}\left(\frac{\qty{250}{\km}}{2\sqrt{\frac{\qty{1.5}{\W\per\m}}{(\qty{2650}{\kg\per\m\s\squared})\cdot(\qty{700}{\joule\per\kilogram\per\kelvin})} \cdot\qty{2.5}{Ga}}}\right)\\
-        &= \qty{670.80}{\celsius}
+        &= \boxed{\qty{670.80}{\celsius}}
     \end{align*}
 
 }
@@ -383,6 +383,7 @@ Comment on the usefulness of soil temperature profiles for reconstructing the cl
 \item Using the temperature derivative of seismic velocity and the temperature you calculated in part A), calculate the seismic velocity anomaly expected at 250~km depth for a cooling time of 2.5~Ga. Assume that the temperature of the surrounding mantle does not change. Can the ``roots'' be due to cooling?
 \solution{
 % wip ADD YOUR ANSWER HERE
+
 
 }
 \end{enumerate}
@@ -392,7 +393,7 @@ Comment on the usefulness of soil temperature profiles for reconstructing the cl
 % ------------------------------------------------------------
 \item \textbf{Fitting concentration profiles with experimentally determined diffusion parameters, and understanding volcanic timescales through simple diffusion chronometry.}
 
-Timescales of magmatic processes relevant to igneous rocks can be obtained by modeling the diffusive relaxation of chemical profiles in minerals. For this problem, we will use data from specially designed experiments in order to determine the general Arrhenius parameters for Fe-Mg inter-diffusion in olivine. Then these parameters will be used to fit real data from an olivine crystal from Mt.\ Etna. The goal is to determine the high-T storage time of the olivine grain in order to understand how much time passed between crystallization and eruption.
+Timescales of magmatic processes relevant to igneous rocks can be obtained by modeling the diffusive relaxation of chemical profiles in minerals. For this problem, we will use data from specially designed experiments in order to determine the general Arrhenius parameters for Fe-Mg inter-diffusion in olivine. Then these parameters will be used to fit real data from an olivine crystal from Mt. Etna. The goal is to determine the high-T storage time of the olivine grain in order to understand how much time passed between crystallization and eruption.
 
 \begin{enumerate}[label=\textit{Part \arabic*:}, leftmargin=*]
 
@@ -418,7 +419,7 @@ where $D_0$ is the pre-exponential constant (diffusivity at infinite $T$), and $
 
 Using the diffusion parameters from \textit{Part 1}, make a best fit for the Etna data. The temperature for this eruption was independently determined to be 1150~$^\circ$C. Determine a timescale of mixing (time from the mixing event when the diffusive clock started to eruption when the diffusion clock effectively stops). You can ignore $f_{\mathrm{O}_2}$, pressure, and crystallographic effects for this calculation.
 
-Note, the thin normally-zoned rim at the very edge of the profile. What process(es) could this be related to?
+Note the thin, normally-zoned rim at the very edge of the profile. What process(es) could this be related to?
 \solution{
 % todo ADD YOUR ANSWER HERE
 
@@ -449,19 +450,66 @@ The specific radiogenic heat production rate per unit mass of rock is estimated 
 \end{align*}
 
 The per volume heat production ($A$, in W/m$^3$) is calculated using the Rybach equation, multiplying density ($\rho$) by the heat production by mass:
-\[
+\begin{equation}
 A = \rho \times (\text{total W/kg of radiogenic heat production})
-\]
+\label{eq:Rybach}
+\end{equation}
 where $\rho$ = rock density (kg/m$^3$). To scale volumetric heat production ($A$) up to surface heat flow ($q_s$, in W/m$^2$), we will use the linear heat flow model from Roy et al., 1968:
-\[
+\begin{equation}
 q_s = q_r + D \times A
-\]
+\label{eq:linear-heat-flow}
+\end{equation}
 where $q_r$ is the reduced heat flow from deeper mantle/core sources ($\sim 15\times10^{-3}$~W/m$^2$) and $D$ is the characteristic crustal thickness scale (m) over which heat-producing elements are concentrated.
 
+\newpage
 \begin{enumerate}[label=\alph*)]
 \item Assuming an upper crustal thickness of 10~km, and using the provided abundances of heat-producing elements in the upper crust, what is the surface heat flow ($q_s$) from the upper crust and mantle/core sources, and how does this compare to the total average value of 53~mW/m$^2$?
 \solution{
-% todo ADD YOUR ANSWER HERE
+    
+    Convert $C_{\text{K}} = 2.5$~wt\% to mass fraction:
+
+    $$ C_{\text{K}} / 100 = 0.025 $$
+
+    Given that $\mu\unit{\g\per\g}$ is the same as parts per million, we can convert $C_{\text{U}}$ and $C_{\text{Th}}$ to mass fraction per kg of rock by dividing by $10^6$:
+
+    $$ C_{\text{U}} / 10^6 = \num{2.8e-6} $$
+
+    $$ C_{\text{Th}} / 10^6 = \num{1.07e-5} $$
+
+    % Using $D = \qty{10}{\km}$:
+
+    \textbf{U:}
+    \begin{align*}
+        A_{\text{U}} &= \rho \times \qty{9.52e-5}{\W\per\kg} \\
+        &= (\qty{2700}{\kg\per\cubic\metre})(\qty{9.52e-5}{\W\per\kg}) \cdot \num{2.8e-6}\\
+        &= \qty{7.19712e-7}{\W\per\cubic\metre}
+    \end{align*}
+
+    \textbf{Th:}
+    \begin{align*}
+        A_{\text{Th}} &= \rho \times \qty{2.56e-5}{\W\per\kg} \\
+        &= (\qty{2700}{\kg\per\cubic\metre})(\qty{2.56e-5}{\W\per\kg}) \cdot \num{1.07e-5} \\
+        &= \qty{7.39584e-7}{\W\per\cubic\metre}
+    \end{align*}
+
+    \textbf{K:}
+    \begin{align*}
+        A_{\text{K}} &= \rho \times \qty{3.48e-9}{\W\per\kg} \\
+        &= (\qty{2700}{\kg\per\cubic\metre})(\qty{3.48e-9}{\W\per\kg}) \cdot 0.025 \\
+        &= \qty{2.349e-7}{\W\per\cubic\metre}
+    \end{align*}
+
+    $$ A = A_{\text{U}} + A_{\text{Th}} + A_{\text{K}} = \num{1.69e-6} $$
+
+    Using the given linear heat flow equation:
+
+    \begin{align*}
+        q_s &= q_r + D \times A\\
+        &= \qty{15e-3}{\watt\per\m\squared} + \qty{10}{\km} \cdot \qty{1.6942e-6}{\watt\per\m\cubed}\\
+        &= \boxed{\qty{31.94}{\mW\per\m\squared}}
+    \end{align*}
+
+    This is notably lower than the observed total average value of $\qty{53}{\mW\per\m\squared}$, suggesting that there must be an additional source of heat production.
 
 }
 
