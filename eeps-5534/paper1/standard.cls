@@ -13,7 +13,8 @@
 % XCharter is a Charter-family font with real small caps, so \scshape works
 % (ships with TeX Live). Fallback if unavailable:
 %   \setmainfont{Charter}
-\setmainfont{XCharter}
+% \setmainfont{XCharter}
+\setmainfont{Open Sans}
 
 % ---------------------------------------------------------------
 % Packages
@@ -29,7 +30,7 @@
 \RequirePackage{bm}
 \RequirePackage{enumitem}
 \RequirePackage{titlesec}
-\RequirePackage{fancyhdr}
+% \RequirePackage{fancyhdr}
 \RequirePackage{csquotes}
 \RequirePackage{pdflscape}
 \RequirePackage{mhchem}
@@ -69,10 +70,10 @@
 % ---------------------------------------------------------------
 % Header / footer: page number bottom center
 % ---------------------------------------------------------------
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.15pt}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyfoot[C]{\thepage}
+% \renewcommand{\headrulewidth}{0.15pt}
 
 % ---------------------------------------------------------------
 % Title block
@@ -116,7 +117,8 @@
     backend=biber,
     hyperref=true,
     backref=false,
-    style=authoryear-comp,
+    % style=authoryear-comp,
+    style=nature, 
     maxcitenames=2,
     mincitenames=1,
     maxbibnames=99,
