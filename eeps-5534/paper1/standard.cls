@@ -13,8 +13,8 @@
 % XCharter is a Charter-family font with real small caps, so \scshape works
 % (ships with TeX Live). Fallback if unavailable:
 %   \setmainfont{Charter}
-% \setmainfont{XCharter}
-\setmainfont{Open Sans}
+\setmainfont{XCharter}
+% \setmainfont{Open Sans}
 
 % ---------------------------------------------------------------
 % Packages
@@ -49,7 +49,7 @@
 % Spacing
 % ---------------------------------------------------------------
 \doublespacing               % change to \onehalfspacing or \singlespacing
-\setlength\parindent{0.25in}
+\setlength\parindent{0.5in}
 % \setlength{\parskip}{0.25ex}
 
 \setlist{nosep}

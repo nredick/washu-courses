@@ -12,12 +12,12 @@
 
 \title{\singlespacing A Multidisciplinary Perspective on Seismic Anisotropy in the Deep Mantle}
 \author{Nathalie Redick}
-\date{30 Sept 2026}
+\date{21 October 2026}
 
 \begin{document}
 
 \maketitle
-
+\thispagestyle{empty}
 \onehalfspacing
 % \linenumbers
 
@@ -35,11 +35,13 @@
 \tableofcontents
 \newpage
 
+\pagenumbering{roman}
+\doublespacing
 \section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+
 
 % Seismic anisotropy is a phenomenon where seismic waves travel at different speeds depending on their direction of propagation \parencite{savageSeismicAnisotropyMantle1999}. It is commonly accepted that seismic anisotropy results from the lattice-preferred orientation (LPO) formed during the deformation of anisotropic minerals in the mantle \parencite{hansenReviewMechanismsGenerating2021,babuskaSeismicAnisotropyEarth1991}.
-% % todo check this
-% % , an idea originally proposed by \textcite{hessSeismicAnisotropyUppermost1964}.
 % As such, seismic anisotropy is a valuable tool for understanding deformational processes, structure, and physical conditions of the Earth's interior.
 
 % Seismic anisotropy is a phenomenon where seismic waves travel at different speeds depending on their direction of propagation \parencite{savageSeismicAnisotropyMantle1999}. It is commonly accepted that seismic anisotropy results from the lattice-preferred orientation (LPO) formed during the deformation of anisotropic minerals in the mantle \parencite{hansenReviewMechanismsGenerating2021,babuskaSeismicAnisotropyEarth1991}. As such, seismic anisotropy is a valuable tool for understanding deformational processes, structure, and physical conditions of the Earth's interior.
@@ -47,29 +49,27 @@
 % We typically measure anisotropy using shear wave splitting (SWS), which can constrain the orientation and magnitude of anisotropy \parencite{chevrotShearWaveSplitting2004,longShearWaveSplitting2009}. Techniques for identifying and isolating deep mantle seismic anisotropy, such as differential splitting and waveform inversions \parencite{wolfAdvancesMappingLowermost2024}, can provide important insights into the dynamics of the lower mantle. However, adequately constraining the source---particularly the depth---of anisotropy remains an outstanding challenge in geophysics \parencite{fischerDepthDistributionMantle1996,liuEstimationDepthAnisotropy2011}.
 % This paper will review our contemporary understanding of anisotropy in the D$''$ along the CMB through a multidisciplinary lens combining seismology, mineral physics, and geochemistry to discuss how we measure and interpret deep mantle anisotropy, and outline outstanding questions and challenges.
 
-Seismic anisotropy is a phenomenon where seismic waves travel at different speeds depending on their propagation direction. It is commonly accepted that seismic anisotropy results primarily from the lattice-preferred orientation (LPO) formed during the deformation of anisotropic minerals in the mantle. As such, seismic anisotropy is a valuable tool for understanding deformational processes, structure, and the physical conditions of the Earth's interior.
+Seismic anisotropy is a phenomenon in which seismic waves travel at different speeds depending on their propagation direction. It is commonly accepted that seismic anisotropy results primarily from the lattice-preferred orientation (LPO) formed during the deformation of anisotropic minerals in the mantle. As such, seismic anisotropy is a valuable tool for understanding deformational processes, structure, and the physical conditions of the Earth's interior.
 Studies of seismic anisotropy often assume the bulk lower mantle is isotropic; however, there are several lines of evidence supporting seismic anisotropy from both LPO and shape-preferred orientation (SPO) in the lowermost 200--300~km of the mantle, known as the D'' layer.
 We typically measure anisotropy using shear wave splitting (SWS), which can constrain the orientation and magnitude of anisotropy. Techniques for identifying and isolating deep mantle seismic anisotropy, such as differential splitting and waveform inversions, can provide important insights into the dynamics of the lower mantle.
 % However, adequately constraining the source---particularly the depth---of anisotropy remains an outstanding challenge in geophysics.
 This paper will review our contemporary understanding of anisotropy in the D$''$ along the core-mantle boundary (CMB) through a multidisciplinary lens combining mineral physics, geochemistry, and seismology to discuss how we measure and interpret deep mantle anisotropy, and outline outstanding questions and challenges.
 
-\doublespacing
+
+\newpage
+\pagenumbering{arabic}
 \section{Introduction}
 
 % wip rework what's left of this
 
-The formation of seismic anisotropy is largely controlled by the local deformation regime, which in turn depends on factors such as temperature, pressure, or the presence of water \parencite{hansenReviewMechanismsGenerating2021,skemerInfluenceWaterLPO2013}.
 % However, studies of seismic anisotropy often assume the lower mantle is isotropic \parencite{silverSeismicAnisotropyContinents1996,savageSeismicAnisotropyMantle1999}---an assumption based primarily on laboratory experiments of peridotites demonstrating LPO does not develop during diffusion creep \parencite{meadeLaboratorySeismologicalObservations1995,zhangLatticePreferredOrientation1995,karatoRoleRecrystallizationPreferred1988}, which is the dominant deformation regime expected under lower mantle conditions.
 % However, convective flow in the lower 300~km of the mantle, known as the D$''$ layer after \textcite{bullenCompressibilityPressureHypothesisEarths1949}, has been shown to drive LPO development \parencite{karatoGeodynamicSignificanceSeismic2008}.
-Seismic anisotropy in the D$''$ layer has important implications for how we interpret observations of seismic anisotropy and our understanding of CMB and D$''$ dynamics.
+
 % but recent research has revealed that this assumption may not be accurate \parencite{...}. In fact, several studies have reported the presence of anisotropy in the lower mantle, which has significant implications for our understanding of the Earth's interior.
 
 % We typically measure anisotropy using shear wave splitting (SWS), which can constrain the orientation and magnitude of anisotropy \parencite{chevrotShearWaveSplitting2004,longShearWaveSplitting2009}. New techniques for identifying and isolating deep mantle seismic anisotropy, such as differential splitting and waveform inversions \parencite{wolfAdvancesMappingLowermost2024}, can provide important insights into the dynamics of the lower mantle.
 % However, adequately constraining the source---particularly the depth---of anisotropy remains an outstanding challenge in geophysics \parencite{fischerDepthDistributionMantle1996,liuEstimationDepthAnisotropy2011}, because measurements of seismic anisotropy have poor vertical resolution because they are integrated along the full receiver-side ray-path of the wave \parencite{longShearWaveSplitting2009}.
-Our understanding of seismic anisotropy along the core-mantle boundary (CMB) is further complicated by the relationship between anisotropy and large low-shear velocity provinces (LLSVPs) \parencite{romanowiczAnisotropyDeepEarth2017,wolfGlobalCompilationDeep2023}, ultra-low velocity zones (ULVZs) \parencite{wolfAdvancesMappingLowermost2024}, and the post-perovskite phase transition \parencite{peltierMantleDynamicsLayer2007}.
 % The CMB is a region of intense geological activity, and the presence of anisotropy in this region may be related to the complex dynamics and interactions between the Earth's core and mantle.
-
-Integrating multidisciplinary techniques is essential for advancing our understanding of seismic anisotropy in the deep mantle, as it allows us to relate the observed seismic properties to the underlying mineralogical and compositional characteristics of the Earth's interior.
 % This paper will review our contemporary understanding anisotropy in the D$''$ along the CMB through a multidisciplinary lens combining seismology, mineral physics, and geochemistry to discuss how we measure and interpret deep mantle anisotropy, and outline outstanding questions and challenges.
 
 % studies of SKS commonly assume that there is no anisotropy in the lower mantle (diffusion creep)
@@ -78,9 +78,14 @@ Integrating multidisciplinary techniques is essential for advancing our understa
 % how do we identify lower mantle anisotropy
 %   - geochem, geophys evidence
 
-% todo You should distinguish between radial (TI) and azimuthal anisotropy
-% todo provide more details on the different seismic observations.
-% todo What type of anisotropy does each observation show?
+The D'' layer plays a fundamental role in the dynamics of the overlying mantle and the core below; it is the lower thermal boundary layer of the mantle convection system, it controls the heat flux out of the core that affects the geodynamo, and it is critical for understanding mantle plumes, slab stagnation, and global convection patterns \parencite{romanowiczAnisotropyDeepEarth2017,garneroNewParadigmEarths2004}. Seismic anisotropy in the D$''$ layer is a crucial tool for understanding these lowermost mantle processes and structures \parencite{wolfAdvancesMappingLowermost2024}.
+However, isolating and interpreting D'' anisotropy poses many challenges; our understanding of seismic anisotropy in this region along the core-mantle boundary (CMB) is complicated by the relationship between anisotropy and large low-shear velocity provinces (LLSVPs) \parencite{romanowiczAnisotropyDeepEarth2017,wolfGlobalCompilationDeep2023}, ultra-low velocity zones (ULVZs) \parencite{wolfAdvancesMappingLowermost2024}, and the distribution and contributions to anisotropy of the dominant mineral phases (post-perovskite, ferropericlase, and bridgemanite) \parencite{peltierMantleDynamicsLayer2007}.
+% The formation of seismic anisotropy is largely controlled by the local deformation regime, which in turn depends on factors such as temperature, pressure, or the presence of water \parencite{hansenReviewMechanismsGenerating2021,skemerInfluenceWaterLPO2013}.
+Integrating multidisciplinary techniques is essential for advancing our understanding of seismic anisotropy in the deep mantle, as it allows us to relate the observed seismic properties to the underlying structural and compositional characteristics of the Earth's interior.
+
+% wip You should distinguish between radial (TI) and azimuthal anisotropy
+% wip provide more details on the different seismic observations.
+% wip What type of anisotropy does each observation show?
 % todo What is the depth range sampled, and what % anisotropy is indicated?
 % todo You should mention that CMB anisotropy is complicated to interpret because the distribution of post-perovskite is not known well - it depends on temperature and pressure, and likely does not comprise the entire D” region.
 
@@ -102,22 +107,27 @@ There are a variety of body wave methods typically used to detect deep mantle an
 % As such, I will review the most common S wave methods below.
 \subsection{Differential splitting techniques}
 
-When shear waves enter an anisotropic medium, they are split into two orthogonally polarized quasi-shear wave components that travel along the fast and slow axes of the material \parencite{silverShearWaveSplitting1991,vecseyShearwaveSplittingMeasurements2008}. The delay time ($\delta t$) between the arrival of the fast and slow components at the receiver, and the fast polarization direction ($\phi$, measured from north; or $\phi'$, in the ray frame) parameters are used to describe this shear wave splitting (SWS) phenomena \parencite{vinnikAzimuthalAnisotropyLithosphere1989,silverShearWaveSplitting1991}. In the Earth, we observe SWS from XKS (SKS, SKKS, S3KS, or PKS) phases that occur from the P-to-S conversion at the CMB, and then propagate through anisotropic layers of the Earth \parencite{longShearWaveSplitting2009}. The initial P-to-S conversion at the CMB produces particle motion polarized in the radial direction, effectively removing any source-side anisotropy; splitting in anisotropic media transfers some energy to the transverse component \parencite{silverShearWaveSplitting1991,longShearWaveSplitting2009}. The conversion removes the delay time accumulated from any source-side anisotropy, such that the observed splitting accumulates only between the CMB and the receiver \parencite{schulte-pelkumSynthesisSeismicAnisotropy2003}. However, determining where at depth anisotropy originates is a challenge.
+When shear waves enter an anisotropic medium, they are split into two orthogonally polarized quasi-shear wave components that travel along the fast and slow axes of the material \parencite{silverShearWaveSplitting1991,vecseyShearwaveSplittingMeasurements2008}. The delay time ($\delta t$) between the arrival of the fast and slow components at the receiver, and the fast polarization direction ($\phi$, measured from north; or $\phi'$, in the ray frame) parameters are used to describe this shear wave splitting (SWS) phenomena \parencite{vinnikAzimuthalAnisotropyLithosphere1989,silverShearWaveSplitting1991}. These differential splitting techniques primarily identify azimuthal anisotropy, which assumes a horizontal symmetry axis such that velocities vary as a function of the horizontal direction \parencite{nowackiNewAdvancesUsing2011,longShearWaveSplitting2009}. Azimuthal anisotropy can be used to distinguish horizontal flow patterns. In the Earth, SWS is commonly observed using XKS phases (SKS, SKKS, S3KS, and PKS), which undergo P-to-S conversion at the CMB before propagating upward through anisotropic mantle layers. Because this conversion produces an initially radially polarized S wave, any splitting accumulated on the source side of the path is removed; therefore, anisotropy along the receiver-side path transfers energy from the radial to the transverse component \parencite{schulte-pelkumSynthesisSeismicAnisotropy2003,silverShearWaveSplitting1991,longShearWaveSplitting2009}.
+However, because the SWS effect is integrated over the whole ray path, determining where at depth anisotropy originates is a challenge.
 
-To overcome this issue, some studies have used differential splitting between XKS phases \parencite[e.g., SKS--SKKS;][]{niuSeismicAnisotropyLower2004,vanacoreCharacterizationGalapagosIslands2011,royUpperLowerMantle2014} to isolate the anisotropy in the deep mantle. This method is based on the assumption that the ray paths of the phases are distinct in the D'' layer but nearly overlapping in the anisotropic upper mantle, therefore, large differences in the observed SWS for each phase can be attributed to anisotropy in the lowermost mantle \parencite{wolfAdvancesMappingLowermost2024,nowackiNewAdvancesUsing2011,wolfGlobalCompilationDeep2023}.
+To overcome this issue, some studies have used differential splitting between XKS phases \parencite[e.g., SKS--SKKS;][]{niuSeismicAnisotropyLower2004,vanacoreCharacterizationGalapagosIslands2011,royUpperLowerMantle2014} to isolate the anisotropy in the deep mantle (see Figure~\ref{fig:methods}c). This method is based on the assumption that the ray paths of the phases are distinct in the D'' layer but nearly overlapping in the anisotropic upper mantle, therefore, large differences in the observed SWS for each phase can be attributed to anisotropy in the lowermost mantle \parencite{wolfAdvancesMappingLowermost2024,nowackiNewAdvancesUsing2011,wolfGlobalCompilationDeep2023}. Non-XKS phases can also be used; for instance, S-ScS differential splitting (see Figure~\ref{fig:methods}d) is a common approach based on the fact that only the ScS phase passes through the D'' layer, but both phases have similar ray paths in the upper mantle on both the source and receiver sides \parencite{wookeyLowermostMantleAnisotropy2005}. However, it has been shown the S-ScS differential splitting may produce apparent splitting if the phase shift of the radial component due to the CMB reflection is not taken into account \parencite{wolfConstrainingDeepMantle2022}.
 
-Similarly, differential splitting between S and ScS has also been used to identify D'' anisotropy because only the ScS phase passes through the D'' layer, but both phases have close ray paths in the upper mantle \parencite{wookeyLowermostMantleAnisotropy2005}. However, \textcite{wolf}
+\subsection{Differential SV-SH travel times}
 
-
-\subsection{Differential SV-SH travel times from teleseismic (S, ScS and Sdiff)}
-
+from teleseismic S, ScS and Sdiff
 
 
 \subsection{Measurements of polarities of S phases that turn in the lowermost mantle (S, SdS, PdP)}
-\subsection{S-ScS differential splitting}
 \subsection{Regional anisotropic inversions}
 \subsection{S\textsubscript{diff,pol} splitting}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{methods}
+    % todo caption methods fig
+    \caption{Adapted from \textcite{wolfGlobalCompilationDeep2023,wolfAdvancesMappingLowermost2024}.}
+    \label{fig:methods}
+\end{figure}
 
 \section{Current Interpretations of Deep Mantle Anisotropy}
 
