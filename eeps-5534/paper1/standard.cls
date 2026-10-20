@@ -2,7 +2,7 @@
 \ProvidesClass{standard}[2026/09/28 Standard class paper template (LuaLaTeX/XeLaTeX)]
 
 % Load base class
-\LoadClass[11pt]{article}
+\LoadClass[12pt]{article}
 
 % ---------------------------------------------------------------
 % Language and fonts (compile with lualatex or xelatex)
@@ -15,6 +15,7 @@
 %   \setmainfont{Charter}
 \setmainfont{XCharter}
 % \setmainfont{Open Sans}
+% \setmainfont{Times New Roman}
 
 % ---------------------------------------------------------------
 % Packages
