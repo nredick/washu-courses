@@ -1,5 +1,7 @@
 \documentclass{standard}
 
+\usepackage{wrapfig}
+
 \addbibresource{/Users/nathalieredick/repos/washu/Library.bib}
 
 % --- HEADER & FOOTER CONFIGURATION ---
@@ -50,11 +52,15 @@
 % This paper will review our contemporary understanding of anisotropy in the D$''$ along the CMB through a multidisciplinary lens combining seismology, mineral physics, and geochemistry to discuss how we measure and interpret deep mantle anisotropy, and outline outstanding questions and challenges.
 
 Seismic anisotropy is a phenomenon in which seismic waves travel at different speeds depending on their propagation direction. It is commonly accepted that seismic anisotropy results primarily from the lattice-preferred orientation (LPO) formed during the deformation of anisotropic minerals in the mantle. As such, seismic anisotropy is a valuable tool for understanding deformational processes, structure, and the physical conditions of the Earth's interior.
-Studies of seismic anisotropy often assume the bulk lower mantle is isotropic; however, there are several lines of evidence supporting seismic anisotropy from both LPO and shape-preferred orientation (SPO) in the lowermost 200--300~km of the mantle, known as the D$''$ layer.
+Studies of seismic anisotropy often assume the bulk lower mantle is isotropic; however, there are several lines of evidence supporting seismic anisotropy from both LPO and shape-preferred orientation (SPO) in the lowermost 200--300~km of the mantle, known as the D$''$.
 We typically measure anisotropy using shear wave splitting (SWS), which can constrain the orientation and magnitude of anisotropy. Techniques for identifying and isolating deep mantle seismic anisotropy, such as differential splitting and waveform inversions, can provide important insights into the dynamics of the lower mantle.
 % However, adequately constraining the source---particularly the depth---of anisotropy remains an outstanding challenge in geophysics.
 This paper will review our contemporary understanding of anisotropy in the D$''$ along the core-mantle boundary (CMB) through a multidisciplinary lens combining mineral physics, geochemistry, and seismology to discuss how we measure and interpret deep mantle anisotropy, and outline outstanding questions and challenges.
 
+% wip You should distinguish between radial (TI) and azimuthal anisotropy
+% wip provide more details on the different seismic observations.
+% wip What type of anisotropy does each observation show?
+% todo What is the depth range sampled, and what % anisotropy is indicated?
 
 \newpage
 \pagenumbering{arabic}
@@ -62,52 +68,61 @@ This paper will review our contemporary understanding of anisotropy in the D$''$
 
 % wip rework what's left of this
 
-% studies of SKS commonly assume that there is no anisotropy in the lower mantle (diffusion creep)
+% studies of SKS commonly assume there is no anisotropy in the lower mantle (diffusion creep)
 % it may not be this straight forward
 % where is this assumption valid, if anywhere?
 % how do we identify lower mantle anisotropy
 %   - geochem, geophys evidence
 
-The D$''$ layer plays a fundamental role in the dynamics of the overlying mantle and the core below; it is the lower thermal boundary layer of the mantle convection system, it controls the heat flux out of the core that affects the geodynamo, and it is critical for understanding mantle plumes, slab stagnation, and global convection patterns \parencite{romanowiczAnisotropyDeepEarth2017,garneroNewParadigmEarths2004}. Seismic anisotropy in the D$''$ layer is a crucial tool for understanding these lowermost mantle processes and structures \parencite{wolfAdvancesMappingLowermost2024}.
+The D$''$ layer plays a fundamental role in the dynamics of the overlying mantle and the core below; it is the lower thermal boundary layer of the mantle convection system, it controls the heat flux out of the core that affects the geodynamo, and it is critical for understanding mantle plumes, slab stagnation, and global convection patterns \parencite{romanowiczAnisotropyDeepEarth2017,garneroNewParadigmEarths2004}. The D$''$ layer, Seismic anisotropy in the D$''$ layer is a crucial tool for understanding these lowermost mantle processes and structures \parencite{wolfAdvancesMappingLowermost2024}.
 However, isolating and interpreting D$''$ anisotropy poses many challenges; our understanding of seismic anisotropy in this region along the core-mantle boundary (CMB) is complicated by the relationship between anisotropy and large low-shear-velocity (LLVPs) \parencite{romanowiczAnisotropyDeepEarth2017,wolfGlobalCompilationDeep2023}, ultra-low velocity zones (ULVZs) \parencite{wolfAdvancesMappingLowermost2024}, and the distribution and contributions to anisotropy of the dominant mineral phases (post-perovskite, ferropericlase, and bridgmanite) \parencite{peltierMantleDynamicsLayer2007}.
-Integrating multidisciplinary techniques is essential for advancing our understanding of seismic anisotropy in the deep mantle, as it allows us to relate the observed seismic properties to the underlying structural and compositional characteristics of the Earth's interior.
 
-D$''$ anisotropy is highly dependent on the distribution of the dominant lower mantle minerals, and their relative anisotropies. \textcite{hirose205MineralogyDeep2015} suggest the relative abundance of the primary minerals is about \textasciitilde30\% \ce{(Mg, Fe)O} (ferropericlase; Fp) and \textasciitilde70\% \ce{(Mg, Fe)SiO3}, "…which may be present as bridgmanite [Bdg] in hotter regions and post-perovskite [pPv] in colder ones" \parencite{hirose205MineralogyDeep2015}. Phase transitions to post-perovskite are reported for many mineral compositions \parencite{hirosePostperovskitePhaseTransition2006}. Improvements in experimental technologies and techniques in the early 2000s made it possible to experimentally isolate the pPv phase \parencite{oganovTheoreticalExperimentalEvidence2004,murakamiPostPerovskitePhaseTransition2004}. Generally speaking, two distinct phenomena are responsible for generating seismic anisotropy: lattice-preferred orientation (LPO) and shape-preferred orientation (SPO). LPO, which is considered the dominant source of anisotropy \parencite{savageSeismicAnisotropyMantle1999}, forms in high-strain regions as material is deformed under shear stress imposed by mantle flow. Under simple shear, deformation via dislocation creep drives the preferential realignment of the crystal axes relative to the shear direction \parencite{kocksTextureAnisotropyPreferred2000}.
+\begin{wrapfigure}{l}{0.4\textwidth}
+    \centering
+    \includegraphics[height=0.43\textheight]{anomalies_dprimeprime}
+    \caption{Changes in temperature (a), seismic velocity (b), partial melt (c), and chemical heterogeneity (d) between the lower mantle and the D'' layer, adapted from \textcite{peltierMantleDynamicsLayer2007}.}
+    \label{fig:anomalies_dprimeprime}
+\end{wrapfigure}
 
-% wip You should distinguish between radial (TI) and azimuthal anisotropy
-% wip provide more details on the different seismic observations.
-% wip What type of anisotropy does each observation show?
-% todo What is the depth range sampled, and what % anisotropy is indicated?
-% todo You should mention that CMB anisotropy is complicated to interpret because the distribution of post-perovskite is not known well - it depends on temperature and pressure, and likely does not comprise the entire D” region.
+% todo describe important observed changes at D''
+
+D$''$ anisotropy is highly dependent on the distribution of the dominant lower mantle minerals and their relative anisotropies. \textcite{hirose205MineralogyDeep2015} suggest the relative abundance of the primary minerals is about \textasciitilde30\% \ce{(Mg, Fe)O} (ferropericlase; Fp) and \textasciitilde70\% \ce{(Mg, Fe)SiO3}, "…which may be present as bridgmanite [Br] in hotter regions and post-perovskite [pPv] in colder ones" \parencite{hirose205MineralogyDeep2015}. Critically, improvements in experimental technologies and techniques in the early 2000s made it possible to experimentally isolate the pPv phase, which has a strong intrinsic elastic anisotropy and may be the dominant phase in the anisotropic regions of D$''$  \parencite{oganovTheoreticalExperimentalEvidence2004,murakamiPostPerovskitePhaseTransition2004}. Phase transitions to pPv structure at lowermost mantle P-T conditions are reported for many compositions \parencite{hirosePostperovskitePhaseTransition2006}.
+Generally speaking, two distinct phenomena are responsible for generating seismic anisotropy: lattice-preferred orientation (LPO) and shape-preferred orientation (SPO). LPO, which is considered the dominant source of anisotropy \parencite{savageSeismicAnisotropyMantle1999}, forms in high-strain regions as material is deformed under shear stress imposed by mantle flow. Under simple shear, deformation via dislocation creep drives the preferential realignment of the crystal axes relative to the shear direction \parencite{kocksTextureAnisotropyPreferred2000}. SPO may be an alternative or complementary explanation for D$''$ anisotropy, but it is difficult to differentiate its effect \parencite{reissLowermostMantleAnisotropy2019}.
+
+% Different seismological techniques are used to infer D$''$ anisotropy, and each are able to resolve different anisotropic geometries and spatial distributions (see Figure~\ref{fig:methods}).
+A variety of body wave methods are used to detect deep mantle anisotropy. Methods for D$''$ anisotropy typically rely on polarization-dependent shear waves, rather than compressional (P) waves. Each approach is sensitive to different aspects of D$''$ anisotropic geometry (i.e., radial vs. azimuthal) \parencite{wolfAdvancesMappingLowermost2024}, and when used in combination, can provide a more holistic picture of D$''$ deformation and potential structures \parencite{romanowiczAnisotropyDeepEarth2017}.
+
+Integrating these multidisciplinary techniques is key to advance our understanding of seismic anisotropy in the deep mantle, as it allows us to relate the underlying structural and compositional characteristics of the Earth's interior to the observed seismic properties.
 
 \section{Mechanisms and Mineral Physics}
 
-% \subsection{Mineralogy}
+LPO development in the lowermost mantle depends on the relationship between the intrinsic properties of the deforming mineral phase and the local conditions, which controls slip system activation \parencite{hansenReviewMechanismsGenerating2021,carrezImplicationsPlasticFlow2007,romanowiczAnisotropyDeepEarth2017}.
+The dominant slip system in pPv is not well-constrained \parencite{romanowiczAnisotropyDeepEarth2017,carrezImplicationsPlasticFlow2007,reissLowermostMantleAnisotropy2019}. Experimental and computational studies propose different deformation mechanisms, including slip on the (001), (010) \parencite[strong \ce{CaIrO3} pPv LPO][]{carrezImplicationsPlasticFlow2007}, and \{110\} planes \parencite[\ce{MgGeO3} pPv analogue][]{carrezImplicationsPlasticFlow2007}. Because each proposed slip system produces a distinct LPO, the resulting radial and azimuthal anisotropy also differs. Recent models of LPO evolution in pPv (\textasciitilde70\%) and Fp (\textasciitilde30\%) for both CMB-parallel flow and upwelling/downwelling flow by \textcite{tommasiDeformationCrystalPreferred2018} produce both radial and azimuthal anisotropy components.
+%In particular, the pPv phase transition
 
-D$''$ anisotropy is highly dependent on the distribution of the dominant lower mantle minerals, and their relative anisotropies. \textcite{hirose205MineralogyDeep2015} suggest the relative abundance of the primary minerals is about \textasciitilde30\% \ce{(Mg, Fe)O} (ferropericlase; Fp) and \textasciitilde70\% \ce{(Mg, Fe)SiO3}, "…which may be present as bridgmanite [Bdg] in hotter regions and post-perovskite [pPv] in colder ones" \parencite{hirose205MineralogyDeep2015}. Phase transitions to post-perovskite are reported for many mineral compositions \parencite{hirosePostperovskitePhaseTransition2006}.
+Fp likely also contributes to D$''$ anisotropy because of its strong intrinsic elastic anisotropy \parencite{marquardtElasticShearAnisotropy2009}. In particular, LPO developed in Fp within cold downwelling regions may produce measurable SWS, although its deformation behavior and slip-system activity remain poorly constrained. However, it is less abundant than pPv. The relative distribution of both phases in different regions of the lowermost mantle may control
 
-Improvements in experimental technologies and techniques in the early 2000s made it possible to experimentally isolate the pPv phase \parencite{oganovTheoreticalExperimentalEvidence2004,murakamiPostPerovskitePhaseTransition2004}.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fp-ppv}
+    \caption{Relative contributions (shaded regions) of anisotropic strength based on maximum shear anisotropy from pPv (in blue) and Fp (in red) in the lower mantle, weighted by their volume abundance in the lower mantle. Assumes that all the crystals of the same phase have the same orientation. Borrowed from \textcite[Figure 4; ][]{marquardtElasticShearAnisotropy2009}.}
+    \label{fig:fp-ppv}
+\end{figure}
 
-% \subsection{Source Mechanisms}
+SPO may also contribute to anisotropy in D$''$, but its relative importance in the lowermost mantle is debated because it is unknown whether there is sufficient melt and wetting for SPO-induced anisotropy \parencite{wolfAdvancesMappingLowermost2024}. Potential SPO anisotropic sources include alignment of partial melt lenses of pPv, compositional heterogeneity (layering), or distinct mineral domains, which can produce seismic anisotropy if the aligned structures have a sufficient elastic contrast and consistent orientation.
 
-% todo add figure differentiating between LPO and SPO
+\begin{wrapfigure}{r}{0.4\textwidth}
+    % \begin{figure}[H]
+        \centering
+        \includegraphics[height=0.25\textheight]{spo}
+        \caption{Schematic depicting potential causes of shape preferred orientation in the D$''$ layer, borrowed from  \href{http://garnero.asu.edu/research_images/anis/garnero21ani_sheets,tubules.jpg}{Ed Garnero}.}
+        \label{fig:spo}
+    % \end{figure}
+\end{wrapfigure}
 
-Generally speaking, two distinct phenomena are responsible for generating seismic anisotropy: lattice-preferred orientation (LPO) and shape-preferred orientation (SPO). LPO, which is most commonly invoked to explain mantle anisotropy \parencite{savageSeismicAnisotropyMantle1999}, forms in high-strain regions as material is deformed under shear stress imposed by mantle flow. Under simple shear, deformation via dislocation creep drives the preferential realignment of the crystal axes relative to the shear direction \parencite{kocksTextureAnisotropyPreferred2000}; diffusion creep does not produce LPO, and regions of the lower mantle dominated by a diffusion creep deformation region are assumed to be largely isotropic \parencite{savageSeismicAnisotropyMantle1999}. However, this process is dependent on the relationship between the intrinsic properties of the deforming mineral phase and the local conditions, which controls slip system activation \parencite{hansenReviewMechanismsGenerating2021,skemerInfluenceWaterLPO2013}.
-
-unknowns about ppv slip systems
-
-Recent models of LPO evolution in pPv (\textasciitilde70\%) and Fp (\textasciitilde30\%) for both CMB-parallel flow and upwelling/downwelling flow by \textcite{tommasiDeformationCrystalPreferred2018} produce both radial and azimuthal anisotropy components.
-
-Interpreting anisotropy in the lowermost mantle is complicated because the distribution of these constituents is poorly constrained; pPv is unlikely to be ubiquitous across the D$''$ region.
-
-
-% - deformation creep vs diffusion creep
-
-% Both LPO and SPO are expected to play important roles in generating D$''$ anisotropy.
+Interpreting anisotropy in the lowermost mantle is complicated because the distribution of these constituents is poorly constrained; pPv is unlikely to be ubiquitous across the D$''$ region. Moreover, because multiple mechanisms can produce similar radial or azimuthal anisotropy signatures, seismic observations alone rarely uniquely identify the underlying mineral fabric, deformation mechanism, or flow geometry. Interpreting D$''$ anisotropy therefore requires combining seismic observations with mineral-physics constraints and models of lowermost mantle flow.
 
 \section{Methods for Detecting Deep Mantle Anisotropy}
-
-There are a variety of body wave methods typically used to detect deep mantle anisotropy. Each approach is sensitive to different aspects of D$''$ anisotropic geometry \parencite{wolfAdvancesMappingLowermost2024}, and when used in combination, can provide a more holistic picture of D$''$ deformation and potential structures \parencite{romanowiczAnisotropyDeepEarth2017}. Methods for D$''$ anisotropy typically rely on polarization-dependent shear waves, rather than compressional (P) waves.
 % As such, I will review the most common S wave methods below.
 
 \subsection{Differential SV-SH travel times}
@@ -123,17 +138,30 @@ where $N$ and $L$ are the Love parameters \parencite{skemerInferringUppermantleF
 
 \subsection{Differential splitting techniques}
 
-When shear waves enter an anisotropic medium, they are split into two orthogonally polarized quasi-shear wave components that travel along the fast and slow axes of the material \parencite{silverShearWaveSplitting1991,vecseyShearwaveSplittingMeasurements2008}. The delay time ($\delta t$) between the arrival of the fast and slow components at the receiver, and the fast polarization direction ($\phi$, measured from north; or $\phi'$, in the ray frame) parameters are used to describe this shear wave splitting (SWS) phenomena \parencite{vinnikAzimuthalAnisotropyLithosphere1989,silverShearWaveSplitting1991}. These differential splitting techniques primarily identify azimuthal anisotropy, which assumes a horizontal symmetry axis such that velocities vary as a function of the horizontal direction \parencite{nowackiNewAdvancesUsing2011,longShearWaveSplitting2009}. Azimuthal anisotropy can be used to distinguish horizontal flow patterns. In the Earth, SWS is commonly observed using XKS phases (SKS, SKKS, S3KS, and PKS), which undergo P-to-S conversion at the CMB before propagating upward through anisotropic mantle layers. Because this conversion produces an initially radially polarized S wave, any splitting accumulated on the source side of the path is removed; therefore, anisotropy along the receiver-side path transfers energy from the radial to the transverse component \parencite{schulte-pelkumSynthesisSeismicAnisotropy2003,silverShearWaveSplitting1991,longShearWaveSplitting2009}.
+When shear waves enter an anisotropic medium, they are split into two orthogonally polarized quasi-shear wave components that travel along the fast and slow axes of the material \parencite{silverShearWaveSplitting1991,vecseyShearwaveSplittingMeasurements2008}. The delay time ($\delta t$) between the arrival of the fast and slow components at the receiver, and the fast polarization direction ($\phi$, measured from north; or $\phi'$, in the ray frame) parameters are used to describe this shear wave splitting (SWS) phenomena (see Figure~\ref{fig:sks-summary}) \parencite{vinnikAzimuthalAnisotropyLithosphere1989,silverShearWaveSplitting1991}.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sks-summary}
+    \caption{Schematic of SWS of SKS phase in the anisotropic D$''$ layer. Upon entering the D$''$ layer, the P wave is converted to an SKS wave phase with orthogonally polarized quasi-shear wave components, separated by a delay time ($\delta t$). The components are travelling along the fast (blue) and slow (red) axes defined by the elastic properties (e.g., LPO, SPO; here unspecified) of the D$''$ layer. While not explicitly depicted in the figure, the fast direction ($\phi$) is typically measured from north. Borrowed from \textcite{wolfAdvancesMappingLowermost2024}.}
+    \label{fig:sks-summary}
+\end{figure}
+These differential splitting techniques primarily identify azimuthal anisotropy, which assumes a horizontal symmetry axis such that velocities vary as a function of the horizontal direction \parencite{nowackiNewAdvancesUsing2011,longShearWaveSplitting2009}. Azimuthal anisotropy can be used to distinguish horizontal flow patterns. In the Earth, SWS is commonly observed using XKS phases (SKS, SKKS, S3KS, and PKS), which undergo P-to-S conversion at the CMB before propagating upward through anisotropic mantle layers. Because this conversion produces an initially radially polarized S wave, any splitting accumulated on the source side of the path is removed; therefore, anisotropy along the receiver-side path transfers energy from the radial to the transverse component \parencite{schulte-pelkumSynthesisSeismicAnisotropy2003,silverShearWaveSplitting1991,longShearWaveSplitting2009}.
 However, because the SWS effect is integrated over the whole ray path, determining where at depth anisotropy originates is a challenge.
 
-To overcome this issue, some studies have used differential splitting between XKS phases \parencite[e.g., SKS--SKKS;][]{niuSeismicAnisotropyLower2004,vanacoreCharacterizationGalapagosIslands2011,royUpperLowerMantle2014} to isolate the anisotropy in the deep mantle (see Figure~\ref{fig:methods}c). This method is based on the assumption that the ray paths of the phases are distinct in the D$''$ layer but nearly overlapping in the anisotropic upper mantle, therefore, large differences in the observed SWS for each phase can be attributed to anisotropy in the lowermost mantle \parencite{wolfAdvancesMappingLowermost2024,nowackiNewAdvancesUsing2011,wolfGlobalCompilationDeep2023}. Note, however, that differences in upper mantle structure may account for small changes in the SKS-SKKS differential \parencite{linFullwaveEffectsShear2014}. Furthermore, evidence for SKS-SKKS splitting in D'' is rare, which is likely a result of finite-frequency effects; based on anisotropic sensitivity kernels, SKS/SKKS have a strong sensitivity kernel for a 50--200~km conic region of the upper mantle, but a weak sensitivity distributed over a 600--1000~km wide zone in the lowermost mantle \parencite{tommasiDeformationCrystalPreferred2018,sieminskiFiniteFrequencySKSSplitting2008,favierSensitivityKernelsShear2003}. Taking their limitations into account, XKS differential splitting methods are still useful for interpreting flow and anisotropic structure along LLVPs, as shown in Figure~\ref{fig:african-LLVP} \parencite{reissLowermostMantleAnisotropy2019}.
+To overcome this issue, some studies have used differential splitting between XKS phases \parencite[e.g., SKS--SKKS;][]{niuSeismicAnisotropyLower2004,vanacoreCharacterizationGalapagosIslands2011,royUpperLowerMantle2014} to isolate the anisotropy in the deep mantle (see Figure~\ref{fig:methods}c). This method is based on the assumption that the ray paths of the phases are distinct in the D$''$ layer but nearly overlapping in the anisotropic upper mantle, therefore, large differences in the observed SWS for each phase can be attributed to anisotropy in the lowermost mantle \parencite{wolfAdvancesMappingLowermost2024,nowackiNewAdvancesUsing2011,wolfGlobalCompilationDeep2023}. Note, however, that differences in upper mantle structure may account for small changes in the SKS-SKKS differential \parencite{linFullwaveEffectsShear2014}. Furthermore, evidence for SKS-SKKS splitting in D$''$ is rare, which is likely a result of finite-frequency effects; based on anisotropic sensitivity kernels, SKS/SKKS have a strong sensitivity kernel for a 50--200~km conic region of the upper mantle, but a weak sensitivity distributed over a 600--1000~km wide zone in the lowermost mantle \parencite{tommasiDeformationCrystalPreferred2018,sieminskiFiniteFrequencySKSSplitting2008,favierSensitivityKernelsShear2003}. Taking their limitations into account, XKS differential splitting methods are still useful for interpreting flow and anisotropic structure along LLVPs, as shown in Figure~\ref{fig:african-LLVP} \parencite{reissLowermostMantleAnisotropy2019}.
 
 Non-XKS phases can also be used; for instance, S-ScS differential splitting (see Figure~\ref{fig:methods}d) is a common approach based on the fact that only the ScS phase passes through the D$''$ layer, but both phases have similar ray paths in the upper mantle on both the source and receiver sides \parencite{wookeyLowermostMantleAnisotropy2005}. However, it has been shown the S-ScS differential splitting may produce apparent splitting if the phase shift of the radial component due to the CMB reflection is not taken into account \parencite{wolfConstrainingDeepMantle2022}.
 
 
-\subsection{Measurements of polarities of S phases that turn in the lowermost mantle (S, SdS, PdP)}
+\subsection{Polarity Analysis}
+
+% Measurements of polarities of S phases that turn in the lowermost mantle (S, SdS, PdP)
+
+Anomalous polarities of S waves reflecting off the CMB can be used to infer anisotropic structures, generally with a tilted symmetry axis, relative to vertical (TTI) \parencite{garneroVariableAzimuthalAnisotropy2004}. P and S waves reflecting off the D$''$ (SdS, PdP; see Figure~\ref{fig:methods}b) can also be used in polarity analysis using array processing techniques such as beamforming \parencite{piscontiDiscriminatingCausesAnisotropy2019,piscontiMineralogyFabricDeformation2023}. The reflection polarities are compared to other seismic phases (S/ScS and P/PcP), and can be used to differentiate between different causes for the observed anisotropy, such as phase transitions (e.g., the perovskite to post-perovskite phase transition), mineral texture or thermal anomalies \parencite{thomasAnisotropyCausePolarity2011}. The polarities are best utilized as an additional constraint for deep mantle anisotropy, rather than an independent observation \parencite{wolfAdvancesMappingLowermost2024}. \textcite{piscontiDiscriminatingCausesAnisotropy2019,piscontiMineralogyFabricDeformation2023} describe several important best practices for polarity analysis, which are well-summarized in \textcite{wolfAdvancesMappingLowermost2024}.
 
 \subsection{Regional anisotropic inversions}
+
+Past studies have computed both regional and global inversions for lowermost mantle structure. ScS waves are commonly used because they have a long ray path through D$''$, and therefore can sample sufficient anisotropy \parencite{wolfAdvancesMappingLowermost2024}.
 
 \subsection{S\textsubscript{diff,pol} splitting}
 
@@ -164,7 +192,7 @@ Regional seismic studies commonly report strong radial anisotropy (\textasciitil
 
 \subsection{ULVZs, Partial Melting, and the CMB Geochemical Interface}
 
-Ultra-low velocity zones
+Ultra-low velocity zones (ULVZs)
 
 % \subsection{Distribution of Anisotropy}
 
@@ -174,7 +202,9 @@ Ultra-low velocity zones
 
 \subsection{Observational Uncertainties}
 
-- bias in azimuthal distribution
+The observed distribution of D$''$ anisotropy is biased toward the Northern Hemisphere (see the relative prevalence of anisotropy in Figure~\ref{fig:methods}), which is most likely a result of uneven sampling because earthquake source locations are not evenly distributed, rather than a lack of anisotropy in the Southern Hemisphere.
+
+% - bias in azimuthal distribution
 
 \subsection{Geodynamical and Mineral Physics Uncertainties}
 

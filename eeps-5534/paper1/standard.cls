@@ -125,6 +125,7 @@
     mincitenames=1,
     maxbibnames=99,
     sortcites=true,
+    % sorting=ynt,
     autocite=inline,
     terseinits=true,
     % abbreviate=false
