@@ -31,10 +31,12 @@
 \RequirePackage{enumitem}
 \RequirePackage{titlesec}
 % \RequirePackage{fancyhdr}
-\RequirePackage{csquotes}
+\RequirePackage[autostyle=true]{csquotes}
+\MakeOuterQuote{"}
 \RequirePackage{pdflscape}
 \RequirePackage{mhchem}
 \RequirePackage{authoraftertitle}
+\RequirePackage{xurl} % Enables line breaks anywhere in long URLs/DOIs
 
 % Figures & tables
 \RequirePackage{graphicx}
