@@ -128,8 +128,10 @@
     sortcites=true,
     % sorting=ynt,
     autocite=inline,
-    terseinits=true,
-    % abbreviate=false
+    terseinits=false,
+    giveninits=true,
+    abbreviate=true,
+    dashed=false,        % Don't replace repeated author names with a dash in the bibliography
 ]{biblatex}
 
 \ExecuteBibliographyOptions{uniquename=false, uniquelist=false}
