@@ -34,7 +34,8 @@
 \RequirePackage{enumitem} % For customizing lists
 \RequirePackage{titlesec} % For customizing section titles
 \RequirePackage{fancyhdr} % For custom headers and footers
-\RequirePackage{csquotes} % For context-sensitive quotes
+\usepackage[autostyle]{csquotes} % For context-sensitive quotes
+\MakeOuterQuote{"}
 % \RequirePackage[document]{ragged2e} % For text alignment
 % \RequirePackage[figuresright]{rotating} % For rotating figures and tables
 \RequirePackage{pdflscape}

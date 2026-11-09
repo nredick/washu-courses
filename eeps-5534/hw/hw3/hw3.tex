@@ -55,7 +55,7 @@
 %   }{}%
 % }
 
-\addbibresource{/Users/nathalieredick/repos/washu/Library.bib}
+\addbibresource{hw3_biber.bib}
 
 
 % --- HEADER & FOOTER CONFIGURATION ---
@@ -151,7 +151,6 @@ p(r) &= \frac{4}{3}\pi\rho_m G b^3(\rho_c - \rho_m)\left(\frac{1}{r} - \frac{1}{
     \item Use the principle of isostasy (the mass in a column remains constant down to the depth of compensation---generally assumed to be the asthenosphere) and the coefficient of thermal expansion ($\alpha\sim$ \qty{2.5e-5}{\celsius^{-1}}) to calculate the change in elevation of the craton that would occur if the thickness of the thermal lithosphere doubled through cooling over time. Note that you can make this calculation easy (but still correct) by assuming that all the mantle lithosphere is at the average mantle lithosphere temperature. So the lithosphere stays at the same average temperature and density, but doubles in thickness.
 
     \solution{
-        % wip q2a
         \begin{figure}[H]
             \centering
             \begin{subfigure}[t]{0.49\textwidth}
@@ -206,15 +205,54 @@ p(r) &= \frac{4}{3}\pi\rho_m G b^3(\rho_c - \rho_m)\left(\frac{1}{r} - \frac{1}{
             % x &= \frac{\rho_l h_{l,i}}{\rho_m} - \frac{\rho_l h_{l,f}}{\rho_m} + \cancel{D_c} - \bcancel{h_c} - h_{l,i} + \bcancel{h_c} + h_{l,f} - \cancel{D_c} \\
             &= \frac{\rho_l h_{l,i}}{\rho_m} - \frac{\rho_l h_{l,f}}{\rho_m} + h_{l,f} - h_{l,i} \\
             &= (h_{l,f} - h_{l,i})\,\frac{\rho_m - \rho_l}{\rho_m} \\
-            &= (165-65) \left( \frac{3300 - 3337}{3300} \right)\\
+            &= (165-65)\unit{\km} \left( \frac{3300 - 3337}{3300} \unit{\kg\per\m\cubed}\right)\\
             &\approx \boxed{\qty{-1.12}{km}}
         \end{align*}
+
+        Doubling the thickness of the lithosphere via cooling results in \textbf{subsidence} of $\sim \qty{1.12}{km}$.
     }
 
+    \newpage
     \item Now calculate the change in elevation expected if the original 65 km thick lithosphere goes from "normal" upper mantle to upper mantle depleted in iron. Assume that the derivative of density with respect to Mg\# is \qty{-12}{\kg\per\m\cubed} Mg\#\textsuperscript{-1} [Akimoto, 1972], where Mg\# is 100*Mg/(Mg+Fe) in the olivine forsterite-fayalite solid solution. Assume that the depletion changes the Mg number from 89 to 94, and that the lithosphere remains 65 km thick.
 
     \solution{
-        % todo q2b
+        \begin{itemize}
+            \item $\frac{\partial \rho}{\partial \mathrm{Mg\#}} = \qty{-12}{\kg\per\m\cubed}\,\mathrm{Mg\#}^{-1}$
+            \item $\mathrm{Mg\#} = \frac{100 \cdot \ce{Mg}}{\ce{Mg}+\ce{Fe}}$
+        \end{itemize}
+
+        Setting up the same mass balance as before:
+
+        \begin{align*}
+            M_{[89]} &= M_{[94]}\\
+        \end{align*}
+
+        \begin{align*}
+            \frac{\partial \rho}{\partial \mathrm{Mg\#}} &= \qty{-12}{\kg\per\m\cubed} \,\mathrm{Mg\#}^{-1} \\
+            \Delta \mathrm{Mg\#} &= 94 - 89 = 5 \\
+            \Delta\rho &= \left(\frac{\partial \rho}{\partial \mathrm{Mg\#}}\right)\left(\Delta \mathrm{Mg\#}\right) \\
+            &= (-12)(5) \\
+            &= \qty{-60}{\kg\per\m\cubed} \\
+            \rho_{[94]} &= \rho_{[89]} + \Delta\rho \\
+            &= 3300 - 60 \\
+            &= \qty{3240}{\kg\per\m\cubed}
+        \end{align*}
+
+        \begin{align*}
+            \cancel{\rho_c h_c} + \rho_{[89]}\,h_l + \rho_m\bigl(D_c - (h_c + h_l)\bigr)
+            &= \cancel{\rho_c h_c} + \rho_{[94]}\,h_l + \rho_m\bigl(D_c + x - (h_c + h_l)\bigr) \\
+            \rho_{[89]}\,h_l - \rho_{[94]}\,h_l + \cancel{\rho_m}\bigl(D_c - (h_c + h_l)\bigr)
+            &= \cancel{\rho_m}\bigl(D_c + x - (h_c + h_l)\bigr) \quad (\div\,\rho_m) \\
+            \frac{\rho_{[89]}\,h_l}{\rho_m} - \frac{\rho_{[94]}\,h_l}{\rho_m}
+            + \cancel{D_c} - \bcancel{h_c} - \xcancel{h_l}
+            &= \cancel{D_c} + x - \bcancel{h_c} - \xcancel{h_l} \\
+            \frac{\rho_{[89]}\,h_l}{\rho_m} - \frac{\rho_{[94]}\,h_l}{\rho_m} &= x \\
+            x &= \frac{(3300)(65)}{3300} - \frac{(3240)(65)}{3300} \\
+            &\approx \boxed{+\qty{1.18}{km}}
+        \end{align*}
+
+        The depletion of the lithospheric mantle results in an \textbf{uplift} of $\sim \qty{1.18}{km}$.
+
     }
 
     \item Now calculate the change in elevation expected if the original 65 km thick undepleted lithosphere is thickened due to cooling and depleted due to iron extraction at the same time. What conclusions can you draw about the effect of different processes on continental lithosphere?
@@ -232,19 +270,60 @@ p(r) &= \frac{4}{3}\pi\rho_m G b^3(\rho_c - \rho_m)\left(\frac{1}{r} - \frac{1}{
     \item If the entire mantle contained this percentage of water, how much water would this be? How does this compare to the total amount of water in the oceans?
 
     \solution{
-        % todo q3a
+
+        Using the mass of Earth's mantle as \qty{4004e21}{\kg}, given by Table 8.1 of \textcite{fowlerSolidEarthIntroduction2012}, the amount of water can be calculated as:
+
+        \begin{align*}
+            \qty{4004e21}{\kg} \cdot \frac{\qty{0.01}{\percent}}{100} &\approx \boxed{\qty{4.004e20}{\kg}}
+        \end{align*}
+
+        Assuming the Earth's oceans have an approximate mass of \qty{1.4e21}{\kg} \parencite{Vallis2012}, this estimate suggests there is significantly more water in the mantle than in Earth's oceans (amount of water in the mantle is $\sim0.29$ times greater).
     }
 
     \item The amount of water inferred for plume mantle source rocks is considerably larger, on the order of 0.05 wt \%. Redo the calculation in A) assuming that the entire mantle contains this amount of water on average.
 
     \solution{
-        % todo q3b
+        \begin{align*}
+            \qty{4004e21}{\kg} \cdot \frac{\qty{0.05}{\percent}}{100} &\approx \boxed{\qty{2.002e21}{\kg}}
+        \end{align*}
+
+        This increases the estimate to $\sim1.4$ times greater than the mass of water in Earth's oceans.
     }
 
     \item “Wet” models of the earth’s interior usually propose significant amounts of water in the transition zone, between the 410 km discontinuity and the 660 km discontinuity. The storage capacity of water in transition zone olivine (wadsleyite and ringwoodite) is thought to be about 1 wt \%. Make a calculation to estimate the amount of water in the transition zone if it is saturated. Express your answer in units of “oceans”.
 
     \solution{
-        % todo q3c
+
+        Volume of the transition zone (estimated using a spherical shell, with radii measured from Earth's center:
+
+        \begin{align*}
+            V &= \frac{4}{3}\pi \left[ (6371 - 410)^3 - (6371 - 660)^3 \right] \qty{}{\km\cubed}\\
+            &= \frac{4}{3}\pi \left[ 5961^3 - 5711^3 \right] \qty{}{\km\cubed}\\
+            &\approx \qty{1.07e11}{\km\cubed}
+        \end{align*}
+
+        Assuming a pyrolite model, wadsleyite + ringwoodite make up $\sim 60$ vol.\% of the transition zone \parencite{ChangetalComparativeCompressibility2015}:
+
+        \begin{align*}
+            V_{\text{ol}} &= 0.6 \times \qty{1.07e11}{\km\cubed}\\
+            &\approx \qty{6.42e10}{\km\cubed} = \qty{6.42e19}{\m\cubed}
+        \end{align*}
+
+        Convert to mass, assuming an average $\rho \approx \qty{4000}{\kg\per\m\cubed}$ for the olivine phases in the transition zone \parencite{ALEXSTREKEISENOlivine}:
+
+        \begin{align*}
+            m &= \rho V \\
+            &= \left(\qty{4000}{\kg\per\m\cubed}\right)\left(\qty{6.42e19}{\m\cubed}\right)\\
+            &\approx \qty{2.57e23}{\kg}
+        \end{align*}
+
+        Mass of water at saturation (1 wt\%):
+
+        \begin{align*}
+            \qty{2.57e23}{\kg} \cdot \frac{\qty{1}{\percent}}{100} &\approx \qty{2.57e21}{\kg}\\
+            \implies \frac{\qty{2.57e21}{\kg}}{\qty{1.4e21}{\kg\per ocean}} &\boxed{\approx \qty{1.8}{oceans}}
+        \end{align*}
+
     }
 \end{enumerate}
 
@@ -256,19 +335,45 @@ p(r) &= \frac{4}{3}\pi\rho_m G b^3(\rho_c - \rho_m)\left(\frac{1}{r} - \frac{1}{
     \item Calculate the decrease in pressure in the mantle due to the removal of the ice sheet. Ignore any geometric effects caused by the finite geographical size of the ice sheet.
 
     \solution{
-        % todo q4a
+
+        Ignoring any geometric effects implies that the change in pressure is not laterally heterogeneous. The pressure in the mantle is the sum of the pressure applied by the overriding ice sheet, the lithosphere, and the overlying air column. Assuming that the lithosphere and air column are unchanged, the decrease in pressure can be calculated as follows, taking the density of ice ($\rho_{\text{ice}}$) as \qty{917}{\kg\per\m\cubed}:
+
+        \begin{align*}
+            \Delta P &= \rho_{\text{ice}} g h\\
+            &= \qty{917}{\kg\per\m\cubed} \cdot \qty{9.81}{\m\per\s\squared} \cdot \qty{1.5e3}{\m}\\
+            &\approx \boxed{\qty{13.5}{\MPa}}
+        \end{align*}
     }
 
     \item Decompression melting normally occurs through mantle upwelling beneath mid-ocean ridges or plumes. Compare the amount of decompression from the ice sheet with mantle upwelling by calculating the distance that mantle material would have to rise in order to have the same amount of pressure reduction.
 
     \solution{
-        % todo q4b
+
+        Assuming again no lateral heterogeneity and an upper mantle density of $\rho_{m}=\qty{3300}{\kg\per\m\cubed}$, the amount of mantle upwelling required to achieve a pressure reduction of \qty{13.5}{\MPa} is:
+
+        \begin{align*}
+            h &= \frac{\Delta P}{\rho_{m}g}\\
+            &= \frac{\qty{1.35e7}{\Pa}}{\qty{3300}{\kg\per\m\cubed}\cdot\qty{9.81}{\m\per\s\squared}}\\
+            &= \boxed{\qty{417}{\m}}
+        \end{align*}
+
     }
 
     \item This model implies that melt is transported from the depths of mantle melting to the surface between the time of deglaciation and the time of massive volcanism. Give an order-of-magnitude estimate of the average vertical melt transport speed indicated by this scenario.
 
     \solution{
-        % todo q4c
+
+        Assuming a mantle melting depth of $\sim\qty{100}{\km}$ beneath Iceland, the average vertical melt transport speed can be calculated as:
+
+        \begin{align*}
+            v &= \frac{d}{t}\\
+            &= \frac{\qty{100}{\km}}{\qty{12}{kyr} - \qty{11}{kyr}}\\
+            &= \frac{\qty{100}{\km}}{\qty{1000}{ yr}}\\
+            &= \qty{0.1}{\km\per yr} = \boxed{\qty{100}{\m\per yr} }%\approx \boxed{\qty{3e-6}{\m\per\s}}
+        \end{align*}
+
+        This is fast, but consistent with constraints on melt speed in the upper mantle that indicate melt transport speeds in the range of 1--100\unit{\m\per yr} \parencite{KatzPhysicsofMeltExtraction2022}.
+
     }
 \end{enumerate}
 
