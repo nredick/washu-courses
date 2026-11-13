@@ -62,16 +62,9 @@ We typically measure anisotropy using shear wave splitting (SWS), which can cons
 % However, adequately constraining the source---particularly the depth---of anisotropy remains an outstanding challenge in geophysics.
 This paper will review our contemporary understanding of anisotropy in the D$''$ along the core-mantle boundary (CMB) through a multidisciplinary lens combining mineral physics, geochemistry, and seismology to discuss how we measure and interpret deep mantle anisotropy, and outline outstanding questions and challenges.
 
-% wip You should distinguish between radial (TI) and azimuthal anisotropy
-% wip provide more details on the different seismic observations.
-% wip What type of anisotropy does each observation show?
-% todo What is the depth range sampled, and what % anisotropy is indicated?
-
 \newpage
 \pagenumbering{arabic}
 \section{Introduction}
-
-% wip rework what's left of this
 
 % studies of SKS commonly assume there is no anisotropy in the lower mantle (diffusion creep)
 % it may not be this straight forward
@@ -201,8 +194,6 @@ Regional seismic studies commonly report strong radial anisotropy (\textasciitil
     \label{fig:african-LLVP}
 \end{figure}
 
-% ? how thick are LLVPs
-
 \subsection{ULVZs and Partial Melting}
 \begin{figure}[h!]
     \centering
@@ -218,7 +209,7 @@ However, this observed velocity ratio could be explained by other features, such
 The observed distribution of D$''$ anisotropy is biased toward the Northern Hemisphere (see the relative prevalence of anisotropy in Figure~\ref{fig:methods}), which is most likely a result of uneven sampling because earthquake source locations are not evenly distributed, rather than a lack of anisotropy in the Southern Hemisphere \parencite{creasyConstrainingLowermostMantle2019}. On a smaller scale, outstanding uncertainties related to the lateral distribution of pPv (and other crucial lower mantle anisotropic phases) along the CMB limits our ability to interpret flow directions; numerical modelling provides important avenues for exploring such questions.
 
 While methods for numerical modelling of LPO \parencite{kaminskiDRexProgramCalculation2004} have been around for over two decades, only recently have advances in computing power have enabled the simultaneous modeling of microscale processes and large-scale (regional or global) geodynamic flow models. These modern methods enable direct comparisons between hypothetical flow models and resulting seismic anisotropy. The ECOMAN package \parencite{faccendaECOMANOpensourcePackage2024} can be used as a post-processing routine to simulate the evolution of both LPO and SPO for both instantaneous and time-dependent models; it can also extrapolate the resultant elastic properties onto a tomographic grid and simulate synthetic SWS observations. \textcite{royLowermostMantleFlow2025} used ECOMAN, coupled with 3D numerical models of LLVPs in the lower mantle, to test the generation of strong radial anisotropy from deformation along the edges of LLVPs.
-% todo finish this thought
+
 % However, because the ECOMAN routines are applied in post-processing, it relies on broad assumptions of steady-state flow ??.
 Alternatively, olivine LPO evolution in geodynamic models can now be modelled \textit{in situ} \parencite{vedavyasDRexNewTool2026,fratersImplementationUsabilityCrystal2021}, allowing for more realistic rheology-dependent viscosities in the model and co-evolution between anisotropic fabrics and mantle flow.
 
