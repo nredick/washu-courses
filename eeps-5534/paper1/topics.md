@@ -1,5 +1,5 @@
 ---
-bibliography: /Users/nathalieredick/repos/washu/Library.bib
+bibliography: /Users/nathalieredick/repos/research/vault/Library.bib
 author: Nathalie R. Redick
 title: EEPS 5534 - Topics Ideas for Paper 1
 date: 2026-09-23
